@@ -133,6 +133,11 @@ function SiteNav() {
     },
     {
       element: Link,
+      text: "Text",
+      to: "/text"
+    },
+    {
+      element: Link,
       text: "Toggle",
       to: "/toggle"
     },

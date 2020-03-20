@@ -27,6 +27,7 @@ import SprkCardDocs from './SprkCardDocs/SprkCardDocs';
 import SprkStepperDocs from './SprkStepperDocs/SprkStepperDocs';
 import SprkFlagDocs from './SprkFlagDocs/SprkFlagDocs';
 import SprkHeadingDocs from './SprkHeadingDocs/SprkHeadingDocs';
+import SprkTextDocs from './SprkTextDocs/SprkTextDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -59,6 +60,7 @@ const Router = () => (
       <Route exact path="/stepper" component={SprkStepperDocs} />
       <Route exact path="/flag" component={SprkFlagDocs} />
       <Route exact path="/heading" component={SprkHeadingDocs} />
+      <Route exact path="/text" component={SprkTextDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
