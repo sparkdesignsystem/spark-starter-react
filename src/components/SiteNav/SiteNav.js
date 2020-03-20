@@ -23,6 +23,11 @@ function SiteNav() {
     },
     {
       element: Link,
+      text: "Box",
+      to: "/box"
+    },
+    {
+      element: Link,
       text: "Button",
       to: "/button"
     },
