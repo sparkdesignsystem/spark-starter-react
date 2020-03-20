@@ -38,6 +38,11 @@ function SiteNav() {
     },
     {
       element: Link,
+      text: "Centered Column",
+      to: "/centered-column"
+    },
+    {
+      element: Link,
       text: "Dictionary",
       to: "/dictionary"
     },
