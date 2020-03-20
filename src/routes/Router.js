@@ -25,6 +25,7 @@ import SprkStackDocs from './SprkStackDocs/SprkStackDocs';
 import SprkAwardDocs from './SprkAwardDocs/SprkAwardDocs';
 import SprkCardDocs from './SprkCardDocs/SprkCardDocs';
 import SprkStepperDocs from './SprkStepperDocs/SprkStepperDocs';
+import SprkFlagDocs from './SprkFlagDocs/SprkFlagDocs';
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -55,6 +56,7 @@ const Router = () => (
       <Route exact path="/accordion" component={SprkAccordionDocs} />
       <Route exact path="/award" component={SprkAwardDocs} />
       <Route exact path="/stepper" component={SprkStepperDocs} />
+      <Route exact path="/flag" component={SprkFlagDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

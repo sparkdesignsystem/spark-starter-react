@@ -53,6 +53,11 @@ function SiteNav() {
     },
     {
       element: Link,
+      text: "Flag",
+      to: "/flag"
+    },
+    {
+      element: Link,
       text: "Highlight Board",
       to: "/highlightboard"
     },
