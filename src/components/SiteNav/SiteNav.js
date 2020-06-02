@@ -126,6 +126,21 @@ function SiteNav() {
       text: "Toggle",
       to: "/toggle"
     },
+    {
+      element: Link,
+      text: 'Flag',
+      to: '/flag'
+    },
+    {
+      element: Link,
+      text: 'Box',
+      to: '/box'
+    },
+    {
+      element: Link,
+      text: 'Centered Column',
+      to: '/centered-column'
+    },
   ];
 
   return (
