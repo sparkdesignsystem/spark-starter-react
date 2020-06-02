@@ -1,6 +1,6 @@
 /* global document */
 import React from 'react';
-import { SprkButton, SprkModal, SprkAlert } from '@sparkdesignsystem/spark-react';
+import { SprkButton, SprkModal } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
@@ -13,7 +13,6 @@ class SprkModalDocs extends React.Component {
       info: false,
       focusTarget: false,
       noFocus: false,
-      alert: false,
       nestedParent: false,
       nestedChild: false,
     };
@@ -33,7 +32,6 @@ class SprkModalDocs extends React.Component {
       info,
       focusTarget,
       noFocus,
-      alert,
       nestedParent,
       nestedChild,
     } = this.state;
