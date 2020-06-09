@@ -17,4 +17,4 @@ This repository includes the Spark Design System assets and all required depende
 
 ## Next Steps
 
-Check out the **Spark Installation Guide for React**. (coming soon)
+Check out our guide for [Installing Spark in a React Project](https://sparkdesignsystem.com/installing-spark/react).
