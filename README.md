@@ -15,4 +15,4 @@ This repository includes all of the prequisites for a Spark React installation, 
 
 ## Next Steps
 
-Check out the **Spark Installation Guide for React**. (link coming soon)
+Check out our guide for [Installing Spark in a React Project](https://sparkdesignsystem.com/installing-spark/react).
