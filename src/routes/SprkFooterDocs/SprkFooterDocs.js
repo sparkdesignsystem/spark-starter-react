@@ -8,7 +8,7 @@ const globalItems = {
     {
       mediaType: 'image',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.app/desktop.jpg',
       altText: 'Spark Logo',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
@@ -17,7 +17,7 @@ const globalItems = {
     {
       mediaType: 'image',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.app/desktop.jpg',
       altText: 'Spark Logo',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
@@ -202,14 +202,14 @@ const awards = {
     {
       href: '#nogo',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.app/desktop.jpg',
       altText: 'Spark Logo',
       element: 'a',
     },
     {
       href: '#nogo',
       src:
-        'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
+        'https://spark-assets.netlify.app/desktop.jpg',
       altText: 'Spark Logo',
       element: 'a',
     },

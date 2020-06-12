@@ -1,6 +1,5 @@
 import React from 'react';
 import { SprkAward } from '@sparkdesignsystem/spark-react';
-import { Link } from 'react-router-dom';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 const SprkAwardDocs = () => (
