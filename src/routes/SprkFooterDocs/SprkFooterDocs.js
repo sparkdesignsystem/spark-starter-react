@@ -10,7 +10,6 @@ const globalItems = {
       src:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
-      mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
       mediaHref: '#nogo',
@@ -20,7 +19,6 @@ const globalItems = {
       src:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
-      mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       element: 'a',
       mediaHref: '#nogo',
@@ -30,7 +28,6 @@ const globalItems = {
       description: 'Lorem ipsum dolor sit amet, consectetur.',
       svg: (
         <svg
-          className="drizzle-c-Logo drizzle-c-Logo--small"
           viewBox="0 0 303 274"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -77,7 +74,6 @@ const globalItems = {
     {
       mediaType: 'SprkIcon',
       description: 'Lorem ipsum dolor sit amet, consectetur.',
-      mediaAddClasses: 'drizzle-c-Logo drizzle-c-Logo--small',
       iconName: 'house',
       element: 'a',
       altText: 'A House Icon',
@@ -208,7 +204,6 @@ const awards = {
       src:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
-      addClasses: 'drizzle-c-Logo',
       element: 'a',
     },
     {
@@ -216,7 +211,6 @@ const awards = {
       src:
         'https://staging.sparkdesignsystem.com/assets/toolkit/images/spark-logo.svg',
       altText: 'Spark Logo',
-      addClasses: 'drizzle-c-Logo',
       element: 'a',
     },
   ],

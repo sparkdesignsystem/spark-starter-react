@@ -103,7 +103,7 @@ function SprkMastheadExtendedDocs() {
       {
         text: 'Option 2',
         value: 'option-2',
-        element: Link,
+        element: 'a',
         to: '/link',
       },
       {
@@ -124,7 +124,7 @@ function SprkMastheadExtendedDocs() {
         value: 'choice-1',
       },
       {
-        element: Link,
+        element: 'a',
         title: 'Selection Choice Title 2',
         information: 'Additional Information',
         to: '/button',

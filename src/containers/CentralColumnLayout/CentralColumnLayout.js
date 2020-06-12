@@ -9,7 +9,7 @@ function CentralColumnLayout(props) {
     <div>
       <IconSet />
       <SiteHeader />
-      <div className="drizzle-o-Layout-content sprk-u-mal sprk-b-TypeBodyTwo">
+      <div className="sprk-u-mal sprk-b-TypeBodyTwo">
         {children}
       </div>
     </div>

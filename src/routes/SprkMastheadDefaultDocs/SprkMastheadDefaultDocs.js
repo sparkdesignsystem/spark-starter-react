@@ -11,7 +11,6 @@ import SiteLogo from '../../components/SiteLogo/SiteLogo';
 function SprkMastheadDefaultDocs() {
   const links = [
     {
-      element: Link,
       text: 'Item 1',
       to: '/link',
     },
@@ -24,7 +23,6 @@ function SprkMastheadDefaultDocs() {
 
   const addedNarrowNavLinks = [
     {
-      element: Link,
       leadingIcon: 'landline',
       text: '(555) 555-5555',
       to: '/button',
@@ -59,7 +57,6 @@ function SprkMastheadDefaultDocs() {
       Talk To Us
     </SprkLink>,
     <SprkButton
-      element={Link}
       to="/button"
       variant="secondary"
       additionalClasses="sprk-c-Button--compact"
