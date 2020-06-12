@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { SprkButton, SprkDropdown } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
@@ -30,7 +29,6 @@ const informationalChoices = {
       isActive: false,
     },
     {
-      element: Link,
       content: {
         title: 'Choice Title 2',
         infoLine1: 'Information about this choice',
@@ -58,7 +56,7 @@ const choices = {
     {
       text: 'Option 2',
       value: 'option-2',
-      element: Link,
+      element: 'a',
       to: '/link',
     },
     {

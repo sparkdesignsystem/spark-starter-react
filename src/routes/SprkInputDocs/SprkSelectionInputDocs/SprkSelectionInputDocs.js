@@ -279,7 +279,7 @@ function SprkSelectionInputDocs() {
           label="Huge Select Box Label"
           name="select-huge-value"
           value="item-2"
-          onChangeFunc={() => {
+          onChange={() => {
             console.log('test function');
           }}
         />

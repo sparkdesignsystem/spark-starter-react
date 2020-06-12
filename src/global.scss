@@ -2,9 +2,9 @@
 $sprk-using-webfonts: true;
 $sprk-webfonts: (
   (
-    url('https://spark-assets.netlify.com/RocketSans-Regular.woff2')
+    url('https://spark-assets.netlify.app/RocketSans-Regular.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/RocketSans-Regular.woff')
+    url('https://spark-assets.netlify.app/RocketSans-Regular.woff')
     format('woff')
   ),
   RocketSans,
@@ -12,9 +12,9 @@ $sprk-webfonts: (
 ),
   (
   (
-    url('https://spark-assets.netlify.com/RocketSans-Bold.woff2')
+    url('https://spark-assets.netlify.app/RocketSans-Bold.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/RocketSans-Bold.woff')
+    url('https://spark-assets.netlify.app/RocketSans-Bold.woff')
     format('woff')
   ),
   RocketSans,
@@ -22,9 +22,9 @@ $sprk-webfonts: (
 ),
   (
   (
-    url('https://spark-assets.netlify.com/RocketSans-Medium.woff2')
+    url('https://spark-assets.netlify.app/RocketSans-Medium.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/RocketSans-Medium.woff')
+    url('https://spark-assets.netlify.app/RocketSans-Medium.woff')
     format('woff')
   ),
   RocketSans,
@@ -32,9 +32,9 @@ $sprk-webfonts: (
 ),
   (
   (
-    url('https://spark-assets.netlify.com/RocketSans-Light.woff2')
+    url('https://spark-assets.netlify.app/RocketSans-Light.woff2')
     format('woff2'),
-    url('https://spark-assets.netlify.com/RocketSans-Light.woff')
+    url('https://spark-assets.netlify.app/RocketSans-Light.woff')
     format('woff')
   ),
   RocketSans,
@@ -60,7 +60,6 @@ $app-namespace: 'sprizzle';
 }
 
 .#{$app-namespace}-b-h2 {
-  // color: $drizzle-black;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -86,10 +85,6 @@ $app-namespace: 'sprizzle';
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-out;
-
-  &:hover {
-    // background-color: $drizzle-highlight;
-  }
 }
 
 $override-namespace: 'react-docs';
@@ -105,6 +100,6 @@ $override-namespace: 'react-docs';
   flex-wrap: wrap;
 }
 
-.sprk-c-Masthead__content {
+.sprk-docs-Masthead .sprk-c-Masthead__content {
   display: none;
 }

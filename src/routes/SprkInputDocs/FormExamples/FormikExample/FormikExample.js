@@ -17,11 +17,12 @@ const FormikExample = () => (
       }, 400);
     }}
   >
+
     {({ values, errors, isSubmitting, isValid }) => (
       <Form>
         <Field
-          name="name"
-          render={({ field /* _form */ }) => (
+          name="name">
+          {({ field /* _form */ }) => (
             <SprkTextInput
               label="Name"
               value={values.name}
@@ -29,14 +30,14 @@ const FormikExample = () => (
               {...field}
             />
           )}
-        />
+        </Field>
 
         <Field
           name="phone"
           validate={value =>
             !isValidPhone(value) ? 'Enter the right phone.' : undefined
-          }
-          render={({ field /* _form */ }) => (
+          }>
+          {({ field /* _form */ }) => (
             <SprkTextInput
               formatter={formatPhone}
               label="Phone Number"
@@ -47,11 +48,11 @@ const FormikExample = () => (
               {...field}
             />
           )}
-        />
+        </Field>
 
         <Field
           name="email"
-          render={({ field /* _form */ }) => (
+        >{({ field /* _form */ }) => (
             <SprkTextInput
               label="Email"
               type="text"
@@ -60,7 +61,7 @@ const FormikExample = () => (
               {...field}
             />
           )}
-        />
+        </Field>
         <SprkButton type="submit" disabled={isSubmitting || !isValid}>
           Submit
         </SprkButton>

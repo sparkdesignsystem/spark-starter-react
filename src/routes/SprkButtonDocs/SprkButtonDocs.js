@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { SprkButton } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
@@ -28,7 +27,7 @@ const SprkButtonDocs = () => {
         <SprkButton loading>Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Incoming Element">
-        <SprkButton element={Link} to="/link">
+        <SprkButton element="a" to="/link">
           React Router Link
         </SprkButton>
       </ExampleContainer>
