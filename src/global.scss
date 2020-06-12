@@ -101,3 +101,7 @@ $override-namespace: 'react-docs';
 .sprk-c-Masthead__big-nav-items {
   flex-wrap: wrap;
 }
+
+.sprk-docs-Masthead .sprk-c-Masthead__content {
+  display: none;
+}

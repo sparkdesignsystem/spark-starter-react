@@ -145,6 +145,7 @@ function SiteNav() {
 
   return (
     <SprkMasthead
+      additionalClasses="sprk-docs-Masthead"
       bigNavLinks={links}
     />
   );
