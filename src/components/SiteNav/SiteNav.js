@@ -23,6 +23,11 @@ function SiteNav() {
     },
     {
       element: Link,
+      text: 'Box',
+      to: '/box'
+    },
+    {
+      element: Link,
       text: "Button",
       to: "/button"
     },
@@ -30,6 +35,11 @@ function SiteNav() {
       element: Link,
       text: "Card",
       to: "/card"
+    },
+    {
+      element: Link,
+      text: 'Centered Column',
+      to: '/centered-column'
     },
     {
       element: Link,
@@ -45,6 +55,11 @@ function SiteNav() {
       element: Link,
       text: "Dropdown",
       to: "/dropdown"
+    },
+    {
+      element: Link,
+      text: 'Flag',
+      to: '/flag'
     },
     {
       element: Link,
@@ -125,21 +140,6 @@ function SiteNav() {
       element: Link,
       text: "Toggle",
       to: "/toggle"
-    },
-    {
-      element: Link,
-      text: 'Flag',
-      to: '/flag'
-    },
-    {
-      element: Link,
-      text: 'Box',
-      to: '/box'
-    },
-    {
-      element: Link,
-      text: 'Centered Column',
-      to: '/centered-column'
     },
   ];
 

@@ -62,7 +62,6 @@ $app-namespace: 'sprizzle';
 }
 
 .#{$app-namespace}-b-h2 {
-  // color: $drizzle-black;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -88,10 +87,6 @@ $app-namespace: 'sprizzle';
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-out;
-
-  &:hover {
-    // background-color: $drizzle-highlight;
-  }
 }
 
 $override-namespace: 'react-docs';
