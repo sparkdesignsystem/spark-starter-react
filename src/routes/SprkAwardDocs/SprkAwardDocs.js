@@ -23,16 +23,16 @@ const SprkAwardDocs = () => (
         {
           href: 'https://www.sparkdesignsystem.com',
           src:
-            'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+            'https://spark-assets.netlify.app/desktop.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-1',
-          element: Link,
+          element: 'a',
           to: '/link',
         },
         {
           href: 'https://www.sparkdesignsystem.com',
           src:
-            'https://www.sparkdesignsystem.com/assets/toolkit/images/spark-placeholder.jpg',
+            'https://spark-assets.netlify.app/desktop.jpg',
           alt: 'Spark Placeholder Logo',
           analyticsString: 'award-2',
           element: 'a',
