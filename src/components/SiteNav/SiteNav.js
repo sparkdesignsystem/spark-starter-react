@@ -141,6 +141,11 @@ function SiteNav() {
       text: "Toggle",
       to: "/toggle"
     },
+    {
+      element: Link,
+      text: "Tooltip",
+      to: "/tooltip"
+    },
   ];
 
   return (

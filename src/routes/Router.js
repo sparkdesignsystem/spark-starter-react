@@ -20,6 +20,7 @@ import SprkModalDocs from './SprkModalDocs/SprkModalDocs';
 import SprkInputDocs from './SprkInputDocs/SprkInputDocs';
 import SprkFooterDocs from './SprkFooterDocs/SprkFooterDocs';
 import SprkToggleDocs from './SprkToggleDocs/SprkToggleDocs';
+import SprkTooltipDocs from './SprkTooltipDocs/SprkTooltipDocs';
 import SprkAccordionDocs from './SprkAccordionDocs/SprkAccordionDocs';
 import SprkStackDocs from './SprkStackDocs/SprkStackDocs';
 import SprkAwardDocs from './SprkAwardDocs/SprkAwardDocs';
@@ -59,6 +60,7 @@ const Router = () => (
       <Route exact path="/accordion" component={SprkAccordionDocs} />
       <Route exact path="/award" component={SprkAwardDocs} />
       <Route exact path="/stepper" component={SprkStepperDocs} />
+      <Route exact path="/tooltip" component={SprkTooltipDocs} />
       <Route exact path="/box" component={SprkBoxDocs} />
       <Route exact path="/centered-column" component={SprkCenteredColumnDocs} />
       <Route exact path="/flag" component={SprkFlagDocs} />
