@@ -181,7 +181,7 @@ class SprkPaginationDocs extends Component {
               Swap Dataset/Variant
             </SprkButton>
 
-            <table className="drizzle-c-Table sprk-u-mbl">
+            <table className="sprk-u-mbl">
               <thead>
                 <tr>
                   <th className="sprk-u-FontWeight--bold">Ship</th>
@@ -203,7 +203,7 @@ class SprkPaginationDocs extends Component {
 
         <ExampleContainer heading="Default Paginator - Long">
           <div className="sprk-u-mbm">
-            <table className="drizzle-c-Table sprk-u-mbl">
+            <table className="sprk-u-mbl">
               <thead>
                 <tr>
                   <th className="sprk-u-FontWeight--bold">State</th>
@@ -225,7 +225,7 @@ class SprkPaginationDocs extends Component {
 
         <ExampleContainer heading="Pager">
           <div className="sprk-u-mbm">
-            <table className="drizzle-c-Table sprk-u-mbl">
+            <table className="sprk-u-mbl">
               <thead>
                 <tr>
                   <th className="sprk-u-FontWeight--bold">State</th>

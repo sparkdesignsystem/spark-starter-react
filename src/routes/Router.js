@@ -26,6 +26,10 @@ import SprkStackDocs from './SprkStackDocs/SprkStackDocs';
 import SprkAwardDocs from './SprkAwardDocs/SprkAwardDocs';
 import SprkCardDocs from './SprkCardDocs/SprkCardDocs';
 import SprkStepperDocs from './SprkStepperDocs/SprkStepperDocs';
+import SprkBoxDocs from './SprkBoxDocs/SprkBoxDocs';
+import SprkFlagDocs from './SprkFlagDocs/SprkFlagDocs';
+import SprkCenteredColumnDocs from './SprkCenteredColumnDocs/SprkCenteredColumnDocs';
+
 import NotFound from './NotFound/NotFound';
 
 const Router = () => (
@@ -57,6 +61,9 @@ const Router = () => (
       <Route exact path="/award" component={SprkAwardDocs} />
       <Route exact path="/stepper" component={SprkStepperDocs} />
       <Route exact path="/tooltip" component={SprkTooltipDocs} />
+      <Route exact path="/box" component={SprkBoxDocs} />
+      <Route exact path="/centered-column" component={SprkCenteredColumnDocs} />
+      <Route exact path="/flag" component={SprkFlagDocs} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

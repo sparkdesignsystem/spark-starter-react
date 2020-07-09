@@ -8,13 +8,13 @@ const SprkHighlightBoardDocs = () => {
     <CentralColumnLayout>
       <ExampleContainer heading="Base">
         <SprkHighlightBoard
-          imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           imgAlt="desktop"
           heading="Hello, Welcome To Spark Design System"
           ctaText="Designers"
-          ctaHref="/gettingstarted/designers.html"
+          ctaHref="#"
           ctaText2="Developers"
-          ctaHref2="/gettingstarted/developers.html"
+          ctaHref2="/#"
           idString="highlightboard-1"
         />
       </ExampleContainer>
@@ -32,13 +32,13 @@ const SprkHighlightBoardDocs = () => {
       <ExampleContainer heading="Stacked">
         <SprkHighlightBoard
           variant="stacked"
-          imgSrc="https://staging.sparkdesignsystem.com/assets/toolkit/images/desktop.jpg"
+          imgSrc="https://spark-assets.netlify.app/desktop.jpg"
           imgAlt="desktop"
           heading="Hello, Welcome To Spark Design System"
           ctaText="Designers"
-          ctaHref="/gettingstarted/designers.html"
+          ctaHref="#"
           ctaText2="Developers"
-          ctaHref2="/gettingstarted/developers.html"
+          ctaHref2="#"
           idString="highlightboard-3"
         />
       </ExampleContainer>
