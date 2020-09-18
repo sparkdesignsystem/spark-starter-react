@@ -8,7 +8,7 @@ class IconSet extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages/Icons/spark-core-icons-V12.svg')
+    fetch('https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages/Icons/spark-icons-V14.svg')
       .then(r => r.text())
       .then((text) => {
         this.setState({ icons: text });
