@@ -43,21 +43,21 @@ const SprkMastheadDefaultDocs = () => {
   const utilityItems = [
     <SprkLink
       href="#nogo"
-      variant="plain"
+      variant="simple"
       additionalClasses="sprk-c-Masthead__link"
     >
       (555) 555-5555
     </SprkLink>,
     <SprkLink
       href="#nogo"
-      variant="plain"
+      variant="simple"
       additionalClasses="sprk-c-Masthead__link"
     >
       Talk To Us
     </SprkLink>,
     <SprkButton
       to="/button"
-      variant="secondary"
+      variant="quaternary"
       additionalClasses="sprk-c-Button--compact"
     >
       Sign In
