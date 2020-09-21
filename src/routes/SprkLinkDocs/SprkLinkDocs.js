@@ -86,7 +86,7 @@ const SprkLinkDocs = () => (
     <ExampleContainer>
       <SprkLink variant="has-icon" idString="link-">
         <SprkIcon
-          additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color"
           iconName="communication"
         />
         Message Us
