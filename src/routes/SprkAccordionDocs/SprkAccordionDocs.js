@@ -45,7 +45,7 @@ class SprkAccordionDocs extends Component {
           <SprkAccordion>
             <SprkAccordionItem
               heading="This is an accordion heading"
-              contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
+              contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
               idString="accordion-item-1"
               analyticsString="analytics_string_goes_here"
             >
@@ -65,7 +65,7 @@ class SprkAccordionDocs extends Component {
 
             <SprkAccordionItem
               heading="This is an accordion heading"
-              contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
+              contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
               idString="accordion-item-1"
               analyticsString="analytics_string_goes_here"
             >
@@ -85,7 +85,7 @@ class SprkAccordionDocs extends Component {
 
             <SprkAccordionItem
               heading="This is an accordion heading"
-              contentAddClasses="sprk-o-Stack sprk-o-Stack--medium"
+              contentAdditionalClasses="sprk-o-Stack sprk-o-Stack--medium"
               idString="accordion-item-1"
               analyticsString="analytics_string_goes_here"
             >

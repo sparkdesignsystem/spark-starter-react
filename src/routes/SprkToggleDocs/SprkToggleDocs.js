@@ -5,7 +5,7 @@ import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralCol
 
 const SprkTabsDocs = () => (
   <CentralColumnLayout>
-    <SprkToggle title="My Disclaimer" analyticsString="toggle-1">
+    <SprkToggle triggerText="My Disclaimer" analyticsString="toggle-1">
       <p className="sprk-b-TypeBodyFour sprk-u-pts sprk-u-pbs">
         This is an example of disclaimer content. The
         aria-expanded=&quot;true&quot; attribute will be viewable in the DOM on
