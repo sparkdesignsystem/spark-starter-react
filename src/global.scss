@@ -41,7 +41,7 @@ $sprk-webfonts: (
   300
 );
 
-@import 'node_modules/@sparkdesignsystem/spark/spark.scss';
+@import "../node_modules/@sparkdesignsystem/spark-styles/spark.scss";
 
 //
 // Bring in doc site styles
