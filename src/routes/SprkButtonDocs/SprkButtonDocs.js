@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SprkButton } from '@sparkdesignsystem/spark-react';
+import { SprkButton, SprkSpinner } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
@@ -24,7 +24,13 @@ const SprkButtonDocs = () => {
         <SprkButton variant="tertiary">Button Text</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Loading Button">
-        <SprkButton loading>Button Text</SprkButton>
+        <SprkButton
+          idString="button-9"
+          analyticsString="button-9-analytics"
+          isSpinning
+        >
+          <SprkSpinner />
+        </SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Incoming Element">
         <SprkButton element="a" to="/link">

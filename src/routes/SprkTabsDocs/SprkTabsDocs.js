@@ -12,8 +12,8 @@ const SprkTabsDocs = () => (
       <SprkTabsPanel
         isDefaultActive
         tabBtnChildren="Tab 1"
-        tabBtnAddClasses="sprk-u-Color--blue"
-        tabBtnAnalytics="tab-1-data-analytics"
+        tabBtnAdditionalClasses="sprk-u-Color--blue"
+        tabBtnAnalyticsString="tab-1-data-analytics"
         data-my-panel-custom="my-panel"
         tabBtnDataId="tab-1"
       >
@@ -28,7 +28,7 @@ const SprkTabsDocs = () => (
 
       <SprkTabsPanel
         tabBtnDataId="tab-2"
-        tabBtnAnalytics="tab-2-data-analytics"
+        tabBtnAnalyticsString="tab-2-data-analytics"
         tabBtnChildren={
           <div>
   <span className="sprk-u-mrm">Tab 2</span>
@@ -95,7 +95,7 @@ const SprkTabsDocs = () => (
     </SprkTabs>
 
     <SprkTabs additionalClasses="sprk-u-mbh">
-      <SprkTabsPanel tabBtnChildren="Fish" tabBtnAnalytics="tab-set-2-tab-1">
+      <SprkTabsPanel tabBtnChildren="Fish" tabBtnAnalyticsString="tab-set-2-tab-1">
         <p>
           Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
@@ -108,7 +108,7 @@ const SprkTabsDocs = () => (
       <SprkTabsPanel
         tabBtnChildren="Foxes"
         isDefaultActive
-        tabBtnAnalytics="tab-set-2-tab-2"
+        tabBtnAnalyticsString="tab-set-2-tab-2"
       >
         <p>
           Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -119,7 +119,7 @@ const SprkTabsDocs = () => (
         </p>
       </SprkTabsPanel>
 
-      <SprkTabsPanel tabBtnChildren="Ferret" tabBtnAnalytics="tab-set-2-tab-3">
+      <SprkTabsPanel tabBtnChildren="Ferret" tabBtnAnalyticsString="tab-set-2-tab-3">
         <p>
           Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
@@ -154,7 +154,7 @@ const SprkTabsDocs = () => (
       <SprkTabsPanel
         isDefaultActive
         tabBtnChildren="Tab 1"
-        tabBtnAnalytics="tab-1"
+        tabBtnAnalyticsString="tab-1"
       >
         <p>
           Tab 1 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -165,7 +165,7 @@ const SprkTabsDocs = () => (
         </p>
       </SprkTabsPanel>
 
-      <SprkTabsPanel tabBtnChildren="Tab 2" tabBtnAnalytics="tab-2">
+      <SprkTabsPanel tabBtnChildren="Tab 2" tabBtnAnalyticsString="tab-2">
         <p>
           Tab 2 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
@@ -175,7 +175,7 @@ const SprkTabsDocs = () => (
         </p>
       </SprkTabsPanel>
 
-      <SprkTabsPanel tabBtnChildren="Tab 3" tabBtnAnalytics="tab-3">
+      <SprkTabsPanel tabBtnChildren="Tab 3" tabBtnAnalyticsString="tab-3">
         <p>
           Tab 3 Content Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Sed quis rhoncus ipsum. Nulla euismod nisi est, vel consequat ante
