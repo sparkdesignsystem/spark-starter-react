@@ -33,7 +33,6 @@ const SprkTabsDocs = () => (
           <div>
   <span className="sprk-u-mrm">Tab 2</span>
   <svg
-              className="drizzle-c-Logo drizzle-c-Logo--small"
               viewBox="0 0 303 274"
               xmlns="http://www.w3.org/2000/svg"
             >
