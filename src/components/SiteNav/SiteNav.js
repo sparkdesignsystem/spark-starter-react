@@ -23,8 +23,8 @@ function SiteNav() {
     },
     {
       element: Link,
-      text: 'Box',
-      to: '/box'
+      text: "Box",
+      to: "/box"
     },
     {
       element: Link,
@@ -38,8 +38,8 @@ function SiteNav() {
     },
     {
       element: Link,
-      text: 'Centered Column',
-      to: '/centered-column'
+      text: "Centered Column",
+      to: "/centered-column"
     },
     {
       element: Link,
@@ -58,13 +58,18 @@ function SiteNav() {
     },
     {
       element: Link,
-      text: 'Flag',
-      to: '/flag'
+      text: "Footer",
+      to: "/footer"
     },
     {
       element: Link,
-      text: "Footer",
-      to: "/footer"
+      text: "Flag",
+      to: "/flag"
+    },
+    {
+      element: Link,
+      text: "Heading",
+      to: "/heading"
     },
     {
       element: Link,
@@ -135,6 +140,11 @@ function SiteNav() {
       element: Link,
       text: "Tabs",
       to: "/tabs"
+    },
+    {
+      element: Link,
+      text: "Text",
+      to: "/text"
     },
     {
       element: Link,

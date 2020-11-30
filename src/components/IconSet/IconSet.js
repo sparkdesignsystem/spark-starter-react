@@ -20,7 +20,7 @@ class IconSet extends React.Component {
   render() {
     const { icons } = this.state;
     return (
-      <div className='icons' dangerouslySetInnerHTML={{ __html: icons }} />
+      <div className='icons' aria-hidden="true" dangerouslySetInnerHTML={{ __html: icons }} />
     );
   }
 }
