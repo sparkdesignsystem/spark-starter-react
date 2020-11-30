@@ -1,5 +1,13 @@
 import React from 'react';
-import { SprkSelectionInput } from '@sparkdesignsystem/spark-react';
+import {
+  SprkSelectionInput,
+  SprkFieldset,
+  SprkLegend,
+  SprkCheckboxItem,
+  SprkCheckboxGroup,
+  SprkRadioGroup,
+  SprkRadioItem
+} from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 function SprkSelectionInputDocs() {
@@ -114,6 +122,28 @@ function SprkSelectionInputDocs() {
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Checkbox</h1>
 
       <ExampleContainer heading="Checkbox">
+        <SprkCheckboxGroup>
+          <SprkFieldset>
+            <SprkLegend>Group Label Name</SprkLegend>
+            <SprkCheckboxItem>Checkbox Item 1</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 2</SprkCheckboxItem>
+            <SprkCheckboxItem>Checkbox Item 3</SprkCheckboxItem>
+          </SprkFieldset>
+        </SprkCheckboxGroup>
+      </ExampleContainer>
+
+      <SprkCheckboxGroup variant="huge">
+        <SprkFieldset>
+          <SprkLegend>Huge Group Label Name</SprkLegend>
+          <SprkCheckboxItem variant="huge">Checkbox Item 1</SprkCheckboxItem>
+          <SprkCheckboxItem variant="huge">Checkbox Item 2</SprkCheckboxItem>
+          <SprkCheckboxItem variant="huge">Checkbox Item 3</SprkCheckboxItem>
+        </SprkFieldset>
+      </SprkCheckboxGroup>
+
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Checkbox (Deprecated)</h1>
+
+      <ExampleContainer heading="Checkbox">
         <SprkSelectionInput
           groupLabel="Checkbox Input"
           choices={checkBoxChoices}
@@ -153,6 +183,32 @@ function SprkSelectionInputDocs() {
       </ExampleContainer>
 
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Radio</h1>
+
+      <SprkRadioGroup>
+        <SprkFieldset>
+          <SprkLegend>Group Label Name</SprkLegend>
+          <SprkRadioItem name="radio">Radio Item 1</SprkRadioItem>
+          <SprkRadioItem name="radio">Radio Item 2</SprkRadioItem>
+          <SprkRadioItem name="radio">Radio Item 3</SprkRadioItem>
+        </SprkFieldset>
+      </SprkRadioGroup>
+
+      <SprkRadioGroup variant="huge">
+        <SprkFieldset>
+          <SprkLegend>Group Label Name</SprkLegend>
+          <SprkRadioItem name="radio" variant="huge">
+            Radio Item 1
+          </SprkRadioItem>
+          <SprkRadioItem name="radio" variant="huge">
+            Radio Item 2
+          </SprkRadioItem>
+          <SprkRadioItem name="radio" variant="huge">
+            Radio Item 3
+          </SprkRadioItem>
+        </SprkFieldset>
+      </SprkRadioGroup>
+
+      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Radio (Deprecated)</h1>
 
       <ExampleContainer>
         <SprkSelectionInput
@@ -279,7 +335,7 @@ function SprkSelectionInputDocs() {
           label="Huge Select Box Label"
           name="select-huge-value"
           value="item-2"
-          onChangeFunc={() => {
+          onChange={() => {
             console.log('test function');
           }}
         />

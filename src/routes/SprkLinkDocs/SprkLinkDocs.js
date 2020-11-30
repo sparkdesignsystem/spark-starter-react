@@ -6,7 +6,7 @@ import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer
 
 const SprkLinkDocs = () => (
   <CentralColumnLayout>
-    <h2 className="drizzle-b-h2">Links</h2>
+    <h2>Links</h2>
     <ExampleContainer>
       <SprkLink href="/">This is a standard Spark Link!</SprkLink>
     </ExampleContainer>
@@ -33,7 +33,7 @@ const SprkLinkDocs = () => (
       <SprkLink variant="plain">Plain Link</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">External Links</h2>
+    <h2>External Links</h2>
     <ExampleContainer>
       <SprkLink id="foo" href="https://google.com" target="_blank">
         https://google.com
@@ -46,7 +46,7 @@ const SprkLinkDocs = () => (
       </SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Same Page Links</h2>
+    <h2>Same Page Links</h2>
     <ExampleContainer>
       <SprkLink href="#info">Jump Link</SprkLink>
     </ExampleContainer>
@@ -55,45 +55,45 @@ const SprkLinkDocs = () => (
       <SprkLink href="/button#jumpLinkTarget">Jump Link with Page</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Link with no href provided</h2>
+    <h2>Link with no href provided</h2>
     <ExampleContainer>
       <SprkLink>No href provided.</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Link Using Tel</h2>
+    <h2>Link Using Tel</h2>
     <ExampleContainer>
       <SprkLink href="tel:+123456789">Tel Link</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Link Using mailto</h2>
+    <h2>Link Using mailto</h2>
     <ExampleContainer>
       <SprkLink href="mailto:example@example.com">mailto Link</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Additional Classes</h2>
+    <h2>Additional Classes</h2>
     <ExampleContainer>
       <SprkLink additionalClasses="sprk-u-mbm">
         Link with Margin Bottom class
       </SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Disabled Link</h2>
+    <h2>Disabled Link</h2>
     <ExampleContainer>
       <SprkLink variant="disabled">Disabled Link</SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">Icon With Text Link</h2>
+    <h2>Icon With Text Link</h2>
     <ExampleContainer>
       <SprkLink variant="has-icon" idString="link-">
         <SprkIcon
-          additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color"
+          additionalClasses="sprk-c-Icon--l sprk-u-mrs sprk-c-Icon--stroke-current-color sprk-c-Icon--filled-current-color"
           iconName="communication"
         />
         Message Us
       </SprkLink>
     </ExampleContainer>
 
-    <h2 className="drizzle-b-h2">React Router Link</h2>
+    <h2>React Router Link</h2>
     <ExampleContainer>
       <SprkLink element={Link} to="/button">
         To Button

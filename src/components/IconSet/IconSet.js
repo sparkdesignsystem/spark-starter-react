@@ -8,7 +8,7 @@ class IconSet extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages/Icons/spark-core-icons-V12.svg')
+    fetch('https://www.rockomni.com/mcds/assets/GlobalContent/NonStockImages/Icons/spark-icons-v14.svg')
       .then(r => r.text())
       .then((text) => {
         this.setState({ icons: text });
@@ -20,7 +20,7 @@ class IconSet extends React.Component {
   render() {
     const { icons } = this.state;
     return (
-      <div className='icons-asdf' dangerouslySetInnerHTML={{ __html: icons }} />
+      <div className='icons' aria-hidden="true" dangerouslySetInnerHTML={{ __html: icons }} />
     );
   }
 }

@@ -25,16 +25,14 @@ const SprkCardDocs = () => {
     },
     media: {
       href: 'https://sparkdesignsystem.com/',
-      mediaLinkElement: 'a',
       imgAlt: 'placeholder image',
-      imgSrc: 'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+      imgSrc: 'https://spark-assets.netlify.app/desktop.jpg',
       mediaAnalyticsString: 'Card:teaser-link',
       mediaVariant: 'img',
     },
     title: 'Teaser Card Title',
     titleFirst: false,
   };
-
   const stackedTeaserIcon = {
     bodyText: 'Body text of a teaser card.',
     cta: {
@@ -46,7 +44,6 @@ const SprkCardDocs = () => {
     media: {
       additionalMediaIconClasses: 'sprk-c-Icon--xxl',
       href: 'https://sparkdesignsystem.com/',
-      mediaLinkElement: 'a',
       iconName: 'call-team-member',
       mediaVariant: 'icon',
     },
@@ -108,10 +105,9 @@ const SprkCardDocs = () => {
             },
             media: {
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               imgAlt: 'placeholder image',
               imgSrc:
-                'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+                'https://spark-assets.netlify.app/desktop.jpg',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'img',
             },
@@ -138,10 +134,9 @@ const SprkCardDocs = () => {
             },
             media: {
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               imgAlt: 'placeholder image',
               imgSrc:
-                'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+                'https://spark-assets.netlify.app/desktop.jpg',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'img',
             },
@@ -169,10 +164,9 @@ const SprkCardDocs = () => {
             },
             media: {
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               imgAlt: 'placeholder image',
               imgSrc:
-                'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+                'https://spark-assets.netlify.app/desktop.jpg',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'img',
             },
@@ -201,7 +195,6 @@ const SprkCardDocs = () => {
             media: {
               additionalMediaIconClasses: 'sprk-c-Icon--xxl',
               to: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: Link,
               iconName: 'call-team-member',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'icon',
@@ -231,7 +224,6 @@ const SprkCardDocs = () => {
             media: {
               additionalMediaIconClasses: 'sprk-c-Icon--xxl',
               to: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: Link,
               iconName: 'call-team-member',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'icon',
@@ -261,7 +253,6 @@ const SprkCardDocs = () => {
             media: {
               additionalMediaIconClasses: 'sprk-c-Icon--xxl',
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               iconName: 'call-team-member',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'icon',
@@ -292,7 +283,6 @@ const SprkCardDocs = () => {
             media: {
               additionalMediaIconClasses: 'sprk-c-Icon--xxl',
               to: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: Link,
               iconName: 'call-team-member',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'icon',
@@ -320,10 +310,9 @@ const SprkCardDocs = () => {
             },
             media: {
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               imgAlt: 'placeholder image',
               imgSrc:
-                'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+                'https://spark-assets.netlify.app/desktop.jpg',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'img',
             },
@@ -351,11 +340,10 @@ const SprkCardDocs = () => {
             media: {
               additionalMediaIconClasses: 'sprk-c-Icon--xxl',
               href: 'https://sparkdesignsystem.com/',
-              mediaLinkElement: 'a',
               iconName: 'call-team-member',
               imgAlt: 'placeholder image',
               imgSrc:
-                'https://sparkdesignsystem.com/assets/toolkit/images/desktop.jpg',
+                'https://spark-assets.netlify.app/desktop.jpg',
               mediaAnalyticsString: 'Card:teaser-link',
               mediaVariant: 'icon',
             },

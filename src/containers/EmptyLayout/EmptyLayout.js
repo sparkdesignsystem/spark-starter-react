@@ -7,7 +7,7 @@ function EmptyLayout(props) {
   return (
     <div>
       <IconSet />
-      <div className="drizzle-o-Layout-content sprk-b-TypeBodyTwo">
+      <div className="sprk-b-TypeBodyTwo">
         {children}
       </div>
     </div>
