@@ -174,24 +174,28 @@ const connectIcons = {
       screenReaderText: 'Facebook',
       analyticsString: 'facebook-icon',
       element: 'a',
+      addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color'
     },
     {
       href: '#nogo',
       name: 'instagram',
       screenReaderText: 'Instagram',
       element: 'a',
+      addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color'
     },
     {
       href: '#nogo',
       name: 'twitter',
       screenReaderText: 'Twitter',
       element: 'a',
+      addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color'
     },
     {
       href: '#nogo',
       name: 'youtube',
       screenReaderText: 'Youtube',
       element: 'a',
+      addClasses: 'sprk-c-Icon--filled-current-color sprk-c-Icon--stroke-current-color'
     },
   ],
 };
@@ -238,21 +242,21 @@ const paragraphs = [
 
 const additionalIcons = [
   {
-    name: 'house',
+    name: 'home',
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',
     element: 'a',
   },
   {
-    name: 'house',
+    name: 'home',
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',
     element: 'a',
   },
   {
-    name: 'house',
+    name: 'home',
     href: '#nogo',
     addClasses: '',
     screenReaderText: 'House',

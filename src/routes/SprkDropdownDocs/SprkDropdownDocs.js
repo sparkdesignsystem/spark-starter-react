@@ -69,11 +69,14 @@ const choices = {
 const SprkDropdownDocs = () => (
   <CentralColumnLayout>
     <ExampleContainer heading="Base">
-      <SprkDropdown choices={choices} iconName="settings" />
+      <SprkDropdown choices={choices} iconName="settings"
+      additionalIconClasses="sprk-c-Icon--l"
+      />
     </ExampleContainer>
     <ExampleContainer heading="Informational">
       <SprkDropdown
         variant="informational"
+        additionalIconClasses="sprk-c-Icon--l"
         title="My Choices"
         choices={informationalChoices}
         defaultTriggerText="Make a selection..."
