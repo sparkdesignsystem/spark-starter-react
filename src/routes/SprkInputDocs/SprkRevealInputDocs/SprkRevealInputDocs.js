@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { SprkRevealInput } from '@sparkdesignsystem/spark-react';
-import {
-  isValidSSN,
-  formatSSN,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
+// import {
+//   isValidSSN,
+//   formatSSN,
+// } from '@sparkdesignsystem/spark/es5/sparkExports';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
+
+const isValidSSN = () => {};
+const formatSSN = () => {};
 
 class SprkRevealInputDocs extends Component {
   constructor(props) {

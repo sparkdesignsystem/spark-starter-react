@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
-import {
-  formatPhone,
-  isValidPhone,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
+// import {
+//   formatPhone,
+//   isValidPhone,
+// } from '@sparkdesignsystem/spark/es5/sparkExports';
+
+const formatPhone = () => {};
+const isValidPhone = () => {};
 
 class FormExample extends Component {
   constructor(props) {

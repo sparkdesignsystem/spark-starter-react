@@ -2,10 +2,13 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
-import {
-  formatPhone,
-  isValidPhone,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
+// import {
+//   formatPhone,
+//   isValidPhone,
+// } from '@sparkdesignsystem/spark/es5/sparkExports';
+
+const formatPhone = () => {};
+const isValidPhone = () => {};
 
 const FormikExample = () => (
   <Formik

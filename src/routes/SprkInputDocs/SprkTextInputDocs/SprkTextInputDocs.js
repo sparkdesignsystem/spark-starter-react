@@ -1,14 +1,21 @@
 import React from 'react';
 import { SprkTextInput } from '@sparkdesignsystem/spark-react';
 import {
-  isValidPhone,
-  isValidDate,
-  formatDate,
-  formatPhone,
-  isValidMonetary,
-  formatMonetary,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
+  sprkIsValidPhone,
+  sprkIsValidDate,
+  sprkFormatDate,
+  sprkFormatPhone,
+  sprkIsValidMonetary,
+  sprkFormatMonetary,
+} from '@sparkdesignsystem/spark-react/src/spark-exports-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
+
+// const isValidPhone = () => {};
+// const isValidDate = () => {};
+// const formatDate = () => {};
+// const formatPhone = () => {};
+// const isValidMonetary = () => {};
+// const formatMonetary = () => {};
 
 class SprkTextInputDocs extends React.Component {
   constructor(props) {
@@ -32,7 +39,7 @@ class SprkTextInputDocs extends React.Component {
   handleMonetaryBlur({ target }) {
     const { value } = target;
     this.setState({
-      monetary: isValidMonetary(value) ? formatMonetary(value) : value,
+      monetary: sprkIsValidMonetary(value) ? sprkFormatMonetary(value) : value,
     });
   }
 
@@ -150,7 +157,7 @@ class SprkTextInputDocs extends React.Component {
             label="Money Amount"
             textIcon
             name="monetary"
-            valid={isValidMonetary(monetary)}
+            valid={sprkIsValidMonetary(monetary)}
             value={monetary}
             onChange={this.handleChange}
             onBlur={this.handleMonetaryBlur}
@@ -173,10 +180,10 @@ class SprkTextInputDocs extends React.Component {
             label="Phone Number"
             name="phone"
             placeholder="(000) 000-0000"
-            valid={isValidPhone(phone)}
+            valid={sprkIsValidPhone(phone)}
             value={
-              isValidPhone(phone) && formatPhone(phone)
-                ? formatPhone(phone)
+              sprkIsValidPhone(phone) && sprkFormatPhone(phone)
+                ? sprkFormatPhone(phone)
                 : phone
             }
             onChange={this.handleChange}
@@ -185,11 +192,11 @@ class SprkTextInputDocs extends React.Component {
         </ExampleContainer>
         <ExampleContainer heading="Date (no picker)">
           <SprkTextInput
-            formatter={formatDate}
+            formatter={sprkFormatDate}
             label="Date"
             name="date"
             placeholder="01/01/2019"
-            valid={isValidDate(date)}
+            valid={sprkIsValidDate(date)}
             value={date}
             onChange={this.handleChange}
             errorMessage="Incorrect date."
