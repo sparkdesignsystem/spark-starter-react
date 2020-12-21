@@ -2,13 +2,10 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
-// import {
-//   formatPhone,
-//   isValidPhone,
-// } from '@sparkdesignsystem/spark/es5/sparkExports';
-
-const formatPhone = () => {};
-const isValidPhone = () => {};
+import {
+  sprkIsValidPhone,
+  sprkFormatPhone,
+} from '@sparkdesignsystem/spark-react/src/spark-exports-react';
 
 const FormikExample = () => (
   <Formik
@@ -38,11 +35,11 @@ const FormikExample = () => (
         <Field
           name="phone"
           validate={value =>
-            !isValidPhone(value) ? 'Enter the right phone.' : undefined
+            !sprkIsValidPhone(value) ? 'Enter the right phone.' : undefined
           }>
           {({ field /* _form */ }) => (
             <SprkTextInput
-              formatter={formatPhone}
+              formatter={sprkFormatPhone}
               label="Phone Number"
               valid={errors.phone && errors.phone.length === 0}
               value={values.phone}

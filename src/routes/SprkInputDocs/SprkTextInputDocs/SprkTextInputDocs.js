@@ -10,13 +10,6 @@ import {
 } from '@sparkdesignsystem/spark-react/src/spark-exports-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
-// const isValidPhone = () => {};
-// const isValidDate = () => {};
-// const formatDate = () => {};
-// const formatPhone = () => {};
-// const isValidMonetary = () => {};
-// const formatMonetary = () => {};
-
 class SprkTextInputDocs extends React.Component {
   constructor(props) {
     super(props);
