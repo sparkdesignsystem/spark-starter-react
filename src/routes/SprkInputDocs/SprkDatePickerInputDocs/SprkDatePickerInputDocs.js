@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { SprkDatePickerInput }
+import { SprkDatePickerInput, sprkIsValidDate, sprkFormatDate }
   from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
-import { 
-  isValidDate, formatDate
-} from '@sparkdesignsystem/spark/es5/sparkExports';
 
 class SprkDatePickerInputDocs extends Component {
   constructor(props) {
@@ -28,11 +25,11 @@ class SprkDatePickerInputDocs extends Component {
       <React.Fragment>
         <ExampleContainer heading="Text">
           <SprkDatePickerInput
-            formatter={formatDate}
+            formatter={sprkFormatDate}
             label="Date"
             name="date"
             placeholder="01/01/2019"
-            valid={isValidDate(date)}
+            valid={sprkIsValidDate(date)}
             value={date}
             onChange={this.handleChange}
             errorMessage="Incorrect date."
