@@ -1,13 +1,13 @@
 import React from 'react';
-import { SprkTextInput } from '@sparkdesignsystem/spark-react';
 import {
+  SprkTextInput,
   sprkIsValidPhone,
   sprkIsValidDate,
   sprkFormatDate,
   sprkFormatPhone,
   sprkIsValidMonetary,
   sprkFormatMonetary,
-} from '@sparkdesignsystem/spark-react/src/spark-exports-react';
+} from '@sparkdesignsystem/spark-react/';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { SprkRevealInput } from '@˝signsystem/spark-react';
-import {
-  sprkIsValidSSN,
-  sprkFormatSSN,
-} from '@sparkdesignsystem/spark-react/src/spark-exports-react';
+import { SprkRevealInput, sprkIsValidSSN, sprkFormatSSN }
+  from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkRevealInputDocs extends Component {

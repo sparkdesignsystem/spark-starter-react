@@ -1,12 +1,8 @@
 /* global alert */
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
-import {
-  sprkIsValidPhone,
-  sprkFormatPhone,
-} from '@sparkdesignsystem/spark-react/src/spark-exports-react';
-
+import { SprkButton, SprkTextInput, sprkIsValidPhone, sprkFormatPhone, }
+  from '@sparkdesignsystem/spark-react';
 const FormikExample = () => (
   <Formik
     initialValues={{ name: '', email: '', phone: '' }}
