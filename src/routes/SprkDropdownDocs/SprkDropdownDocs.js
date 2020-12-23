@@ -26,7 +26,7 @@ const informationalChoices = {
         infoLine2: 'More Information',
       },
       value: 'choice-title-1',
-      isActive: false,
+      isDefault: false,
     },
     {
       content: {
@@ -36,7 +36,7 @@ const informationalChoices = {
       },
       to: '/button',
       value: 'choice-title-2',
-      isActive: true,
+      isDefault: true,
     },
   ],
 };
