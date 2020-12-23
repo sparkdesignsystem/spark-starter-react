@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { SprkRevealInput, sprkIsValidSSN, sprkFormatSSN }
+import { SprkRevealInput }
   from '@sparkdesignsystem/spark-react';
+
+  import { 
+    isValidSSN, formatSSN
+  } from '@sparkdesignsystem/spark/es5/sparkExports';
+
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkRevealInputDocs extends Component {
@@ -33,8 +38,8 @@ class SprkRevealInputDocs extends Component {
         <ExampleContainer heading="SSN">
           <SprkRevealInput
             errorMessage="There is an error in this field."
-            formatter={sprkFormatSSN}
-            valid={sprkIsValidSSN(ssn)}
+            formatter={formatSSN}
+            valid={isValidSSN(ssn)}
             value={ssn}
             onChange={this.handleChange}
             label="Social Security Number"
