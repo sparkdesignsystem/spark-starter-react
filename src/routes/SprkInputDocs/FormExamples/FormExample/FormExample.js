@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { SprkButton, SprkTextInput } from '@sparkdesignsystem/spark-react';
 import {
-  formatPhone,
-  isValidPhone,
-} from '@sparkdesignsystem/spark/es5/sparkExports';
+  SprkButton, SprkTextInput, sprkIsValidPhone, sprkFormatPhone,
+} from '@sparkdesignsystem/spark-react';
 
 class FormExample extends Component {
   constructor(props) {
@@ -25,8 +23,8 @@ class FormExample extends Component {
     const { value, name } = target;
     this.setState({
       [name]: value,
-      [`formatted${name}`]: formatPhone(value, true),
-      [`${name}Valid`]: isValidPhone(value),
+      [`formatted${name}`]: sprkFormatPhone(value, true),
+      [`${name}Valid`]: sprkIsValidPhone(value),
       [`${name}ErrorMessage`]: 'You have entered the wrong phone number.',
     });
   }
