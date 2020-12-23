@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   SprkTextInput,
-  sprkIsValidPhone,
-  sprkIsValidDate,
-  sprkFormatDate,
-  sprkFormatPhone,
-  sprkIsValidMonetary,
-  sprkFormatMonetary,
 } from '@sparkdesignsystem/spark-react/';
+
+
+import { 
+  isValidPhone, isValidDate, formatDate, formatPhone, isValidMonetary, formatMonetary
+} from '@sparkdesignsystem/spark/es5/sparkExports';
+
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 class SprkTextInputDocs extends React.Component {
@@ -32,7 +32,7 @@ class SprkTextInputDocs extends React.Component {
   handleMonetaryBlur({ target }) {
     const { value } = target;
     this.setState({
-      monetary: sprkIsValidMonetary(value) ? sprkFormatMonetary(value) : value,
+      monetary: isValidMonetary(value) ? formatMonetary(value) : value,
     });
   }
 
@@ -150,7 +150,7 @@ class SprkTextInputDocs extends React.Component {
             label="Money Amount"
             textIcon
             name="monetary"
-            valid={sprkIsValidMonetary(monetary)}
+            valid={isValidMonetary(monetary)}
             value={monetary}
             onChange={this.handleChange}
             onBlur={this.handleMonetaryBlur}
@@ -173,10 +173,10 @@ class SprkTextInputDocs extends React.Component {
             label="Phone Number"
             name="phone"
             placeholder="(000) 000-0000"
-            valid={sprkIsValidPhone(phone)}
+            valid={isValidPhone(phone)}
             value={
-              sprkIsValidPhone(phone) && sprkFormatPhone(phone)
-                ? sprkFormatPhone(phone)
+              isValidPhone(phone) && formatPhone(phone)
+                ? formatPhone(phone)
                 : phone
             }
             onChange={this.handleChange}
@@ -185,11 +185,11 @@ class SprkTextInputDocs extends React.Component {
         </ExampleContainer>
         <ExampleContainer heading="Date (no picker)">
           <SprkTextInput
-            formatter={sprkFormatDate}
+            formatter={formatDate}
             label="Date"
             name="date"
             placeholder="01/01/2019"
-            valid={sprkIsValidDate(date)}
+            valid={isValidDate(date)}
             value={date}
             onChange={this.handleChange}
             errorMessage="Incorrect date."
