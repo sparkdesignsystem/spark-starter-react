@@ -15,7 +15,7 @@ const SprkButtonDocs = () => {
         <SprkButton element="a" href="#nogo" target="_blank">
           Link Button w/ New Window
         </SprkButton>
-        <SprkButton disabled>Disabled Button</SprkButton>
+        <SprkButton isDisabled>Disabled Button</SprkButton>
       </ExampleContainer>
       <ExampleContainer heading="Secondary Buttons">
         <SprkButton variant="secondary">Button Text</SprkButton>

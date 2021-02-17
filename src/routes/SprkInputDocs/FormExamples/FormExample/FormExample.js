@@ -83,7 +83,7 @@ class FormExample extends Component {
           placeholder="email@example.com"
           errorMessage={EmailErrorMessage}
         />
-        <SprkButton type="button" disabled={!isValid}>
+        <SprkButton type="button" isDisabled={!isValid}>
           Submit
         </SprkButton>
       </form>
