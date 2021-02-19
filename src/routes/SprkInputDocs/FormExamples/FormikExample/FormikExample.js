@@ -59,7 +59,7 @@ const FormikExample = () => (
             />
           )}
         </Field>
-        <SprkButton type="submit" disabled={isSubmitting || !isValid}>
+        <SprkButton type="submit" isDisabled={isSubmitting || !isValid}>
           Submit
         </SprkButton>
       </Form>

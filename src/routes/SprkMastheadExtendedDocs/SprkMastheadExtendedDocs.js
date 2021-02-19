@@ -146,7 +146,7 @@ const SprkMastheadExtendedDocs  = () => {
   const utilityItems = [
     <SprkLink
       href="#nogo"
-      variant="plain"
+      variant="simple"
       additionalClasses="sprk-c-Masthead__link"
     >
       Talk To Us

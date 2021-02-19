@@ -162,6 +162,7 @@ function SiteNav() {
     <SprkMasthead
       additionalClasses="sprk-docs-Masthead"
       bigNavLinks={links}
+      narrowNavLinks={links}
     />
   );
 }
