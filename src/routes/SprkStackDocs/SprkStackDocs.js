@@ -77,11 +77,11 @@ const SprkStackDocs = () => (
     </SprkStack>
 
     <SprkStack splitAt="huge" itemSpacing="huge" additionalClasses="sprk-u-mbl">
-      <SprkStackItem additionalClasses="sprk-u-BackgroundColor--yellow">
+      <SprkStackItem additionalClasses="sprk-u-BackgroundColor--orange">
         <p>Test stack split and huge item spacing.</p>
       </SprkStackItem>
 
-      <SprkStackItem additionalClasses="sprk-u-BackgroundColor--yellow">
+      <SprkStackItem additionalClasses="sprk-u-BackgroundColor--orange">
         <p>Test stack split and huge item spacing.</p>
       </SprkStackItem>
     </SprkStack>

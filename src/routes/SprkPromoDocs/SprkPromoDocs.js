@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkPromo } from '@sparkdesignsystem/spark-react';
+import { SprkPromo, SprkStack, SprkStackItem, SprkHeading, SprkText, SprkLink } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 import ExampleContainer from '../../containers/ExampleContainer/ExampleContainer';
 
@@ -8,170 +8,259 @@ const SprkPromoDocs = () => {
     <CentralColumnLayout>
       <ExampleContainer heading="Base Promo">
         <div className="sprk-u-mbm">
-          <SprkPromo
-            title="Title"
-            subtitle="Subtitle"
-            additionalClasses="sprk-o-Stack--split@s"
-            cta="button"
-            ctaText="Learn More"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="promo-cta-1-analytics"
-            ctaIdString="promo-cta-1"
-            hasBorder
-            idString="promo-1"
-          >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
-        </div>
-      </ExampleContainer>
+        <SprkPromo idString="default-promo" hasBorder>
+          <SprkStackItem additionalClasses="sprk-c-Promo__content">
+            <SprkStack itemSpacing="large">
+              <SprkStackItem>
+                <SprkHeading
+                  element="h3"
+                  variant="displayFive"
+                  additionalClasses="sprk-c-Promo__title"
+                >
+                  Title
+                </SprkHeading>
+              </SprkStackItem>
 
-      <ExampleContainer heading="Base Promo with Link">
-        <div className="sprk-u-mbm">
-          <SprkPromo
-            title="Title"
-            subtitle="Subtitle"
-            additionalClasses="sprk-o-Stack--split@s"
-            cta="link"
-            ctaText="Learn More"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="promo-cta-2-analytics"
-            ctaIdString="promo-cta-2"
-            idString="promo-2"
-            hasBorder
-          >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
+              <SprkStackItem>
+                <SprkText
+                  variant="bodyOne"
+                  additionalClasses="sprk-c-Promo__subtitle"
+                >
+                  Subtitle
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+                  inventore integer eum non enim diam habitant. Maecenas nunc per
+                  lacus neque egestas. Diam quod curabitur.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem additionalClasses="sprk-o-Stack__item--end-column">
+                <SprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  className="sprk-c-Button"
+                  analyticsString="default-promo-cta"
+                >
+                  Learn More
+                </SprkLink>
+              </SprkStackItem>
+            </SprkStack>
+          </SprkStackItem>
+        </SprkPromo>
         </div>
       </ExampleContainer>
 
       <ExampleContainer heading="Flag Promo">
         <div className="sprk-u-mbm">
-          <SprkPromo
-            additionalClasses="sprk-o-Stack--split@s"
-            imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-            imgAlt="Spark Design System Logo"
-            imgLinkHref="https://sparkdesignsystem.com"
-            imgLinkAnalytics="promo-3-img-link-analytics"
-            imgLinkIdString="promo-3-img-link"
-            idString="promo-3"
-            isFlag
-            hasBorder
+        <SprkPromo
+          idString="flag-promo"
+          hasBorder
+          isFlag
+          additionalClasses="sprk-o-Stack--split@s"
+        >
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--fourth@s">
+            <SprkLink variant="unstyled" href="#nogo">
+              <img
+                className="sprk-c-Promo__image sprk-c-Promo__image--flag"
+                alt="Learn more about Spark Design System."
+                src="https://spark-assets.netlify.app/spark-logo-updated.svg"
+              />
+            </SprkLink>
+          </SprkStackItem>
+
+          <SprkStackItem
+            additionalClasses="
+              sprk-c-Promo__content
+              sprk-o-Stack__item--three-fourths@s
+            "
           >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
+            <SprkStack itemSpacing="large">
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+                  inventore integer eum non enim diam habitant. Maecenas nunc per
+                  lacus neque egestas. Diam quod curabitur.
+                </SprkText>
+              </SprkStackItem>
+            </SprkStack>
+          </SprkStackItem>
+        </SprkPromo>
         </div>
       </ExampleContainer>
 
       <ExampleContainer heading="Flag Promo (Reversed)">
         <div className="sprk-u-mbm">
-          <SprkPromo
-            additionalClasses="sprk-o-Stack--split@s"
-            cta="link"
-            ctaText="Learn More"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="promo-cta-4-analytics"
-            ctaIdString="promo-cta-4"
-            imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-            imgAlt="Spark Design System Logo"
-            imgLinkAnalytics="promo-4-img-link-analytics"
-            imgLinkIdString="promo-4-img-link"
-            idString="promo-4"
-            isFlag
-            mediaRev
-            hasBorder
+        <SprkPromo
+          idString="flag-promo"
+          hasBorder
+          isFlag
+          additionalClasses="sprk-o-Stack--split@s"
+        >
+          <SprkStackItem               
+            additionalClasses="
+              sprk-c-Promo__content
+              sprk-o-Stack__item--three-fourths@s"
           >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
+            <SprkStack itemSpacing="large">
+                <SprkStackItem>
+                  <SprkText variant="bodyTwo">
+                    Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+                    inventore integer eum non enim diam habitant. Maecenas nunc per
+                    lacus neque egestas. Diam quod curabitur.
+                  </SprkText>
+                </SprkStackItem>
+              </SprkStack>
+          </SprkStackItem>
+          <SprkStackItem
+           additionalClasses="sprk-o-Stack__item--fourth@s"
+          >
+            <SprkLink variant="unstyled" href="#nogo">
+              <img
+                className="sprk-c-Promo__image sprk-c-Promo__image--flag"
+                alt="Learn more about Spark Design System."
+                src="https://spark-assets.netlify.app/spark-logo-updated.svg"
+              />
+            </SprkLink>
+          </SprkStackItem>
+        </SprkPromo>
         </div>
       </ExampleContainer>
 
       <ExampleContainer heading="Promo with Image">
         <div className="sprk-u-mbm">
-          <SprkPromo
-            title="Title"
-            subtitle="Subtitle"
-            additionalClasses="sprk-o-Stack--split@s"
-            cta="button"
-            ctaText="Learn More"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="promo-cta-5-analytics"
-            ctaIdString="promo-cta-5"
-            imgAlt="placeholder"
-            imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-            imgLinkAnalytics="promo-5-img-link-analytics"
-            imgLinkIdString="promo-5-img-link"
-            idString="promo-5"
-            hasBorder
+        <SprkPromo
+          idString="image-promo"
+          hasBorder
+          additionalClasses="sprk-o-Stack--split@s"
+        >
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
+            <SprkLink variant="unstyled" href="#nogo">
+              <img
+                className="sprk-c-Promo__image"
+                alt="Additional insights about this property."
+                src="https://spark-assets.netlify.app/house.jpg"
+              />
+            </SprkLink>
+          </SprkStackItem>
+
+          <SprkStackItem
+            additionalClasses="
+              sprk-c-Promo__content
+              sprk-o-Stack__item--half@s
+            "
           >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
+            <SprkStack itemSpacing="large">
+              <SprkStackItem>
+                <SprkHeading
+                  element="h3"
+                  variant="displayFive"
+                  additionalClasses="sprk-c-Promo__title"
+                >
+                  Title
+                </SprkHeading>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText
+                  variant="bodyOne"
+                  additionalClasses="sprk-c-Promo__subtitle"
+                >
+                  Subtitle
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+                  inventore integer eum non enim diam habitant. Maecenas nunc per
+                  lacus neque egestas. Diam quod curabitur.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  className="sprk-c-Button"
+                  analyticsString="image-promo-cta"
+                >
+                  Learn More
+                </SprkLink>
+              </SprkStackItem>
+            </SprkStack>
+          </SprkStackItem>
+        </SprkPromo>
         </div>
       </ExampleContainer>
 
       <ExampleContainer heading="Promo with Image (Reversed)">
         <div className="sprk-u-mbm">
-          <SprkPromo
-            title="Title"
-            subtitle="Subtitle"
-            additionalClasses="sprk-o-Stack--split@s"
-            cta="button"
-            ctaText="Learn More"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="promo-cta-6-analytics"
-            ctaIdString="promo-cta-6"
-            imgAlt="placeholder"
-            imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-            imgLinkHref="https://sparkdesignsystem.com"
-            imgLinkAnalytics="promo-6-img-link-analytics"
-            imgLinkIdString="promo-6-img-link"
-            idString="promo-6"
-            mediaRev
-            hasBorder
+        <SprkPromo
+          idString="rev-image-promo"
+          hasBorder
+          additionalClasses="sprk-o-Stack--split@s"
+        >
+          <SprkStackItem
+            additionalClasses="
+              sprk-c-Promo__content
+              sprk-o-Stack__item--half@s
+            "
           >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
-        </div>
-      </ExampleContainer>
+            <SprkStack itemSpacing="large">
+              <SprkStackItem>
+                <SprkHeading
+                  element="h3"
+                  variant="displayFive"
+                  additionalClasses="sprk-c-Promo__title"
+                >
+                  Title
+                </SprkHeading>
+              </SprkStackItem>
 
-      <ExampleContainer heading="Promo with All Properties">
-        <div className="sprk-u-mbm">
-          <SprkPromo
-            title="Title"
-            subtitle="Subtitle"
-            additionalClasses="sprk-o-Stack--split@s additionalClassRoot"
-            additionalClassesContent="additionalClassContent"
-            cta="link"
-            ctaText="I'm a Button"
-            ctaHref="https://www.sparkdesignsystem.com"
-            ctaAnalytics="cta-analytics-string"
-            ctaIdString="cta-id-string"
-            imgSrc="https://spark-assets.netlify.app/desktop.jpg"
-            imgAlt="placeholder"
-            imgLinkHref="https://sparkdesignsystem.com"
-            imgLinkAnalytics="img-link-analytics-string"
-            imgLinkIdString="img-link-id-string"
-            additionalClassesImgLink="additionalClassImageLink"
-            idString="promo-7"
-            hasBorder
-            isFlag
-            mediaRev
-          >
-            Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
-            inventore integer eum non enim diam habitant. Maecenas nunc per
-            lacus neque egestas. Diam quod curabitur.
-          </SprkPromo>
+              <SprkStackItem>
+                <SprkText
+                  variant="bodyOne"
+                  additionalClasses="sprk-c-Promo__subtitle"
+                >
+                  Subtitle
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkText variant="bodyTwo">
+                  Lorem ipsum dolor. Sit amet pede. Tempus donec et. Suspendisse id
+                  inventore integer eum non enim diam habitant. Maecenas nunc per
+                  lacus neque egestas. Diam quod curabitur.
+                </SprkText>
+              </SprkStackItem>
+
+              <SprkStackItem>
+                <SprkLink
+                  variant="unstyled"
+                  href="#nogo"
+                  className="sprk-c-Button"
+                  analyticsString="rev-image-promo-cta"
+                >
+                  Learn More
+                </SprkLink>
+              </SprkStackItem>
+            </SprkStack>
+          </SprkStackItem>
+
+          <SprkStackItem additionalClasses="sprk-o-Stack__item--half@s">
+            <SprkLink variant="unstyled" href="#nogo">
+              <img
+                className="sprk-c-Promo__image"
+                alt="Additional insights about this property."
+                src="https://spark-assets.netlify.app/house.jpg"
+              />
+            </SprkLink>
+          </SprkStackItem>
+        </SprkPromo>
         </div>
       </ExampleContainer>
     </CentralColumnLayout>
