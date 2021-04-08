@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "@sparkdesignsystem/spark-react": "^5.0.0-beta.0",
-    "formik": "^2.2.5",
+    "formik": "^2.2.6",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,9 +33,9 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.1.2"
+    "node-sass": "^5.0.0",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.1"
   }
 }
