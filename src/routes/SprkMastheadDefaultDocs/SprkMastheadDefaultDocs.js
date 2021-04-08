@@ -57,7 +57,7 @@ const SprkMastheadDefaultDocs = () => {
     </SprkLink>,
     <SprkButton
       to="/button"
-      variant="quaternary"
+      variant="secondary"
       additionalClasses="sprk-c-Button--compact"
     >
       Sign In
