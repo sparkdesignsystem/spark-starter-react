@@ -1,4 +1,4 @@
-/* global document */
+/* global */
 import React from 'react';
 import { SprkButton, SprkModal } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
