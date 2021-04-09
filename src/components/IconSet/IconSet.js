@@ -1,4 +1,4 @@
-/* global fetch window CustomEvent */
+/* global */
 import React from 'react';
 
 class IconSet extends React.Component {
