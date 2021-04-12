@@ -1,4 +1,4 @@
-/* global alert */
+/* global */
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import { SprkButton, SprkTextInput, sprkIsValidPhone, sprkFormatPhone }

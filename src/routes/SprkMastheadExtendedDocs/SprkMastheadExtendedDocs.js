@@ -153,10 +153,10 @@ const SprkMastheadExtendedDocs  = () => {
     </SprkLink>,
     <SprkDropdown
       additionalClasses="sprk-u-Right--zero sprk-u-mrm"
-      additionalIconClasses="sprk-c-Icon--l"
+      iconAdditionalClasses="sprk-c-Icon--l"
       iconName="user-account"
       choices={dropdownChoices}
-      title="My Choices"
+      heading="My Choices"
     />,
   ];
 

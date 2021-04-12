@@ -10,7 +10,7 @@ import SprkDatePickerInputDocs from '../SprkInputDocs/SprkDatePickerInputDocs/Sp
 const Homepage = () => {
   return (
     <CentralColumnLayout>
-      <h1 className="sprk-b-TypeDisplayTwo sprk-b-PageTitle">What's New in Spark React version 4.1.0</h1>
+      <h1 className="sprk-b-TypeDisplayTwo sprk-b-PageTitle">What's New in Spark React version 5.0.0</h1>
       <h2 className="sprk-b-TypeDisplayThree sprk-u-mvl">Formatters and Validators</h2>
       <p className="sprk-u-mvl">Input formatters and validators have been added to the spark-react package. You can see examples of these utilities in action on the Inputs example pages.</p>
       <ul className="sprk-u-mbl">
