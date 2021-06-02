@@ -1,5 +1,5 @@
 import React from 'react';
-import { SprkFooter } from '@sparkdesignsystem/spark-react';
+import { SprkFooter, SprkText, SprkStackItem, SprkLink } from '@sparkdesignsystem/spark-react';
 import CentralColumnLayout from '../../containers/CentralColumnLayout/CentralColumnLayout';
 
 const globalItems = {
@@ -273,6 +273,17 @@ const SprkFooterDocs = () => (
       awards={awards}
       additionalIcons={additionalIcons}
       paragraphs={paragraphs}
+      additionalDisclaimer={
+        <SprkStackItem>
+          <SprkText
+            variant="bodyFour"
+            additionalClasses="sprk-c-Footer__text"
+            element="p"
+          >
+            Sed ut perspiciatis unde omnis iste natus error sit <SprkLink href="#nogo" additionalClasses="sprk-b-Link--inline-light">inline link</SprkLink> accusantium doloremque laudantiu.
+          </SprkText>
+        </SprkStackItem>
+      }
     />
   </CentralColumnLayout>
 );
