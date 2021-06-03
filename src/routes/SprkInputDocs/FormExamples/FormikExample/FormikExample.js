@@ -1,7 +1,14 @@
 /* global */
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { SprkButton, SprkTextInput, sprkIsValidPhone, sprkFormatPhone }
+import {
+  SprkButton,
+  sprkIsValidPhone,
+  sprkFormatPhone,
+  SprkInputContainer,
+  SprkLabel,
+  SprkInput,
+}
   from '@sparkdesignsystem/spark-react';
 
 const FormikExample = () => (
@@ -20,12 +27,16 @@ const FormikExample = () => (
         <Field
           name="name">
           {({ field /* _form */ }) => (
-            <SprkTextInput
-              label="Name"
-              value={values.name}
-              placeholder="Enter your first name"
-              {...field}
-            />
+            <SprkInputContainer>
+              <SprkLabel>Name</SprkLabel>
+              <SprkInput
+                type="text"
+                placeholder="Enter your first name"
+                name="Name"
+                value={values.name}
+                {...field}
+              />
+            </SprkInputContainer>
           )}
         </Field>
 
@@ -35,29 +46,44 @@ const FormikExample = () => (
             !sprkIsValidPhone(value) ? 'Enter the right phone.' : undefined
           }>
           {({ field /* _form */ }) => (
-            <SprkTextInput
-              formatter={sprkFormatPhone}
-              label="Phone Number"
-              valid={errors.phone && errors.phone.length === 0}
-              value={values.phone}
-              placeholder="(313) 333-1234"
-              errorMessage={errors.phone}
-              {...field}
-            />
+            <SprkInputContainer>
+              <SprkLabel>Phone Number</SprkLabel>
+              <SprkInput
+                placeholder="(000) 000-0000"
+                type="tel"
+                isValid={sprkIsValidPhone(values.phone)}
+                value={values.phone}
+                {...field}
+              // TODO formatter
+              />
+              {/* { !sprkIsValidPhone(phone) &&
+              // TODO error state
+                  <SprkFieldError id="invalid-phone">
+                    <SprkIcon
+                      iconName="exclamation-filled"
+                      additionalClasses="sprk-b-ErrorIcon"
+                      aria-hidden="true"
+                    />
+                    <div className="sprk-b-ErrorText">There is an error on this field.</div>
+                  </SprkFieldError>
+                } */}
+            </SprkInputContainer>
           )}
         </Field>
 
         <Field
           name="email"
         >{({ field /* _form */ }) => (
-            <SprkTextInput
-              label="Email"
-              type="text"
-              value={values.email}
+          <SprkInputContainer>
+            <SprkLabel>Email</SprkLabel>
+            <SprkInput
+              type="email"
               placeholder="email@example.com"
+              value={values.email}
               {...field}
             />
-          )}
+          </SprkInputContainer>
+        )}
         </Field>
         <SprkButton type="submit" isDisabled={isSubmitting || !isValid}>
           Submit
