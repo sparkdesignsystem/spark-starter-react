@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import {
-  SprkButton, SprkTextInput, sprkIsValidPhone, sprkFormatPhone,
+  SprkButton,
+  SprkTextInput,
+  SprkInputContainer,
+  SprkLabel,
+  SprkInput,
+  sprkIsValidPhone,
+  sprkFormatPhone,
 } from '@sparkdesignsystem/spark-react';
 
 class FormExample extends Component {
@@ -10,6 +16,7 @@ class FormExample extends Component {
       isValid: true,
       Phone: '',
       formattedPhone: '',
+      Name: '',
     };
     this.testFormValidity = this.testFormValidity.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
@@ -55,7 +62,7 @@ class FormExample extends Component {
     } = this.state;
     return (
       <form>
-        <SprkTextInput
+        {/* <SprkTextInput
           onChange={this.handleNameChange}
           label="Name"
           name="Name"
@@ -63,8 +70,24 @@ class FormExample extends Component {
           value={Name}
           placeholder="Enter your first name"
           errorMessage={NameErrorMessage}
-        />
-        <SprkTextInput
+        /> */}
+
+        <SprkInputContainer>
+          <SprkLabel>Name</SprkLabel>
+          <SprkInput
+            type="text"
+            placeholder="Enter your first name"
+            name="Name"
+            onChange={this.handleNameChange}
+            valid={NameValid}
+            value={Name}
+          />
+          {/* error container */}
+        </SprkInputContainer>
+
+
+
+        {/* <SprkTextInput
           onChange={this.handlePhoneChange}
           label="Phone Number"
           name="Phone"
@@ -85,7 +108,7 @@ class FormExample extends Component {
         />
         <SprkButton type="button" isDisabled={!isValid}>
           Submit
-        </SprkButton>
+        </SprkButton> */}
       </form>
     );
   }

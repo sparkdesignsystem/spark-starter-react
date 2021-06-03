@@ -10,7 +10,7 @@ function FormExamples() {
         <FormExample />
       </ExampleContainer>
       <ExampleContainer heading="Formik Example">
-        <FormikExample />
+        {/* <FormikExample /> */}
       </ExampleContainer>
     </React.Fragment>
   );
