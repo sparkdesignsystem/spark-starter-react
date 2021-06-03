@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  SprkDatePickerInput,
   SprkInputContainer,
   SprkLabel,
   SprkIcon,
@@ -65,7 +64,7 @@ class SprkDatePickerInputDocs extends Component {
                 name="date"
               />
             </div>
-            {/* { !sprkIsValidDate(date) &&
+            { !sprkIsValidDate(date) &&
               <SprkFieldError id="invalid-monetary">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -74,7 +73,7 @@ class SprkDatePickerInputDocs extends Component {
                 />
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
-            } */}
+            }
           </SprkInputContainer>
 
         </ExampleContainer>

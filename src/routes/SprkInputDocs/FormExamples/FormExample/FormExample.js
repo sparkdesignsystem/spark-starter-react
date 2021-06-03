@@ -6,6 +6,8 @@ import {
   SprkInput,
   sprkIsValidPhone,
   sprkFormatPhone,
+  SprkFieldError,
+  SprkIcon,
 } from '@sparkdesignsystem/spark-react';
 
 class FormExample extends Component {
@@ -61,7 +63,6 @@ class FormExample extends Component {
             onChange={this.handleChange}
             value={Name}
           />
-          {/* error container */}
         </SprkInputContainer>
         <SprkInputContainer>
           <SprkLabel htmlFor="phone-1">Phone Number</SprkLabel>
@@ -75,17 +76,16 @@ class FormExample extends Component {
             onChange={this.handleChange}
           // TODO formatter
           />
-          {/* { !sprkIsValidPhone(phone) &&
-          // TODO error state
-              <SprkFieldError id="invalid-phone">
-                <SprkIcon
-                  iconName="exclamation-filled"
-                  additionalClasses="sprk-b-ErrorIcon"
-                  aria-hidden="true"
-                />
-                <div className="sprk-b-ErrorText">There is an error on this field.</div>
-              </SprkFieldError>
-            } */}
+          { !sprkIsValidPhone(Phone) &&
+            <SprkFieldError id="invalid-phone">
+              <SprkIcon
+                iconName="exclamation-filled"
+                additionalClasses="sprk-b-ErrorIcon"
+                aria-hidden="true"
+              />
+              <div className="sprk-b-ErrorText">There is an error on this field.</div>
+            </SprkFieldError>
+          }
         </SprkInputContainer>
         <SprkInputContainer>
           <SprkLabel>Email</SprkLabel>

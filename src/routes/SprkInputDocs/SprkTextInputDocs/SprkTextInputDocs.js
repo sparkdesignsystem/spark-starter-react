@@ -202,7 +202,7 @@ class SprkTextInputDocs extends React.Component {
                 // onBlur={this.handleMonetaryBlur}
               />
             </div>
-            {/* { !sprkIsValidMonetary(monetary) &&
+            { !sprkIsValidMonetary(monetary) &&
               <SprkFieldError id="invalid-monetary">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -211,7 +211,7 @@ class SprkTextInputDocs extends React.Component {
                 />
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
-            } */}
+            }
             </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Percentage">
@@ -252,7 +252,7 @@ class SprkTextInputDocs extends React.Component {
               onChange={this.handleChange}
             // TODO formatter
             />
-            {/* { !sprkIsValidPhone(phone) &&
+            { !sprkIsValidPhone(phone) &&
               <SprkFieldError id="invalid-phone">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -261,7 +261,7 @@ class SprkTextInputDocs extends React.Component {
                 />
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
-            } */}
+            }
           </SprkInputContainer>
 
         </ExampleContainer>
@@ -277,7 +277,7 @@ class SprkTextInputDocs extends React.Component {
               isValid={sprkIsValidDate(date)}
               onChange={this.handleChange}
             />
-            {/* { !sprkIsValidDate(date) &&
+            { !sprkIsValidDate(date) &&
               <SprkFieldError id="invalid-date">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -286,7 +286,7 @@ class SprkTextInputDocs extends React.Component {
                 />
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
-            } */}
+            }
           </SprkInputContainer>
         </ExampleContainer>
       </>
