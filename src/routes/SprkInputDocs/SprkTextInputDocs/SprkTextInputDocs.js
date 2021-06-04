@@ -60,14 +60,20 @@ class SprkTextInputDocs extends React.Component {
             <SprkLabel>Name</SprkLabel>
             <SprkInput type="text" placeholder="Enter your first name" />
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Text with default value">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
             <SprkInput type="text" defaultValue="default value" />
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Text input disabled">
           <SprkInputContainer>
             <SprkLabel isDisabled>Name</SprkLabel>
             <SprkInput type="text" placeholder="Enter your first name" isDisabled />
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Text input error">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
             <SprkInput
@@ -84,6 +90,8 @@ class SprkTextInputDocs extends React.Component {
               <div className="sprk-b-ErrorText">There is an error on this field.</div>
             </SprkFieldError>
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Huge">
           <SprkInputContainer variant="huge">
             <SprkInput
               variant="huge"
@@ -92,6 +100,8 @@ class SprkTextInputDocs extends React.Component {
             />
             <SprkLabel>Name</SprkLabel>
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Huge Error">
           <SprkInputContainer variant="huge">
             <SprkInput
               variant="huge"
@@ -109,6 +119,8 @@ class SprkTextInputDocs extends React.Component {
               <div className="sprk-b-ErrorText">There is an error on this field.</div>
             </SprkFieldError>
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Huge Disabled">
           <SprkInputContainer variant="huge">
             <SprkInput
               variant="huge"
@@ -118,6 +130,8 @@ class SprkTextInputDocs extends React.Component {
             />
             <SprkLabel>Text Input Label</SprkLabel>
           </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Huge with default value">
           <SprkInputContainer variant="huge">
             <SprkInput
               variant="huge"
