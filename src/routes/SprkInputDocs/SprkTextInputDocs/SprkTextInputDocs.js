@@ -196,13 +196,10 @@ class SprkTextInputDocs extends React.Component {
                 isValid={sprkIsValidMonetary(monetary)}
                 value={monetary}
                 onChange={this.handleChange}
-                // formatter={sprkFormatMonetary}
-                // onValueUpdated={this.handleMonetaryUpdate}
-                // TODO formatting
-                // onBlur={this.handleMonetaryBlur}
+              // formatter={sprkFormatMonetary}
               />
             </div>
-            { !sprkIsValidMonetary(monetary) &&
+            {!sprkIsValidMonetary(monetary) &&
               <SprkFieldError id="invalid-monetary">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -212,7 +209,7 @@ class SprkTextInputDocs extends React.Component {
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
             }
-            </SprkInputContainer>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Percentage">
           <SprkInputContainer>
@@ -250,9 +247,10 @@ class SprkTextInputDocs extends React.Component {
               isValid={sprkIsValidPhone(phone)}
               value={phone}
               onChange={this.handleChange}
-            // TODO formatter
+              // TODO formatter
+              // formatter={sprkFormatMonetary}
             />
-            { !sprkIsValidPhone(phone) &&
+            {!sprkIsValidPhone(phone) &&
               <SprkFieldError id="invalid-phone">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -277,7 +275,7 @@ class SprkTextInputDocs extends React.Component {
               isValid={sprkIsValidDate(date)}
               onChange={this.handleChange}
             />
-            { !sprkIsValidDate(date) &&
+            {!sprkIsValidDate(date) &&
               <SprkFieldError id="invalid-date">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -287,6 +285,22 @@ class SprkTextInputDocs extends React.Component {
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
             }
+          </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Multiple aria-describedbys">
+          <SprkInputContainer>
+            <SprkLabel>Name</SprkLabel>
+            <SprkInput type="text" ariaDescribedBy="required_message" />
+            <SprkHelperText>The name you would like to be addressed as.</SprkHelperText>
+            <SprkFieldError>
+              <SprkIcon
+                iconName="exclamation-filled"
+                additionalClasses="sprk-b-ErrorIcon"
+                aria-hidden="true"
+              />
+              <div className="sprk-b-ErrorText">There is an error on this field.</div>
+            </SprkFieldError>
+            <div id="required_message">* This input is required.</div>
           </SprkInputContainer>
         </ExampleContainer>
       </>
