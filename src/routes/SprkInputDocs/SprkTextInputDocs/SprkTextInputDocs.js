@@ -27,8 +27,7 @@ class SprkTextInputDocs extends React.Component {
       monetary: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleMonetaryBlur = this.handleMonetaryBlur.bind(this);
-    this.handleMonetaryUpdate = this.handleMonetaryUpdate.bind(this);
+    this.cats = this.cats.bind(this);
   }
 
   handleChange({ target }) {
@@ -38,17 +37,10 @@ class SprkTextInputDocs extends React.Component {
     });
   }
 
-  handleMonetaryUpdate(newValue) {
-    this.setState({
-      monetary: newValue,
-    });
-  }
-
-  handleMonetaryBlur({ target }) {
-    const { value } = target;
-    this.setState({
-      monetary: sprkIsValidMonetary(value) ? sprkFormatMonetary(value) : value,
-    });
+  cats = (value) => {
+    return Number(value.replace(/,/g, ''))
+    .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    .replace(/\$/g, '');
   }
 
   render() {
@@ -58,19 +50,19 @@ class SprkTextInputDocs extends React.Component {
         <ExampleContainer heading="Text">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
-            <SprkInput type="text" placeholder="Enter your first name" />
+            <SprkInput type="text" placeholder="Enter your first name" id="text1"/>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Text with default value">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
-            <SprkInput type="text" defaultValue="default value" />
+            <SprkInput type="text" defaultValue="default value"  id="text2"/>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Text input disabled">
           <SprkInputContainer>
             <SprkLabel isDisabled>Name</SprkLabel>
-            <SprkInput type="text" placeholder="Enter your first name" isDisabled />
+            <SprkInput type="text" placeholder="Enter your first name" isDisabled  id="text3"/>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Text input error">
@@ -80,6 +72,7 @@ class SprkTextInputDocs extends React.Component {
               type="text"
               isValid={false}
               placeholder="Enter your first name"
+              id="text4"
             />
             <SprkFieldError>
               <SprkIcon
@@ -97,6 +90,7 @@ class SprkTextInputDocs extends React.Component {
               variant="huge"
               type="text"
               placeholder="Enter your first name"
+              id="text5"
             />
             <SprkLabel>Name</SprkLabel>
           </SprkInputContainer>
@@ -108,6 +102,7 @@ class SprkTextInputDocs extends React.Component {
               placeholder="Enter your first name"
               isValid={false}
               type="text"
+              id="text6"
             />
             <SprkLabel>Name</SprkLabel>
             <SprkFieldError>
@@ -127,6 +122,7 @@ class SprkTextInputDocs extends React.Component {
               placeholder="Enter your first name"
               isDisabled
               type="text"
+              id="text7"
             />
             <SprkLabel>Text Input Label</SprkLabel>
           </SprkInputContainer>
@@ -138,6 +134,7 @@ class SprkTextInputDocs extends React.Component {
               type="text"
               placeholder="Enter your first name"
               defaultValue="Default Value"
+              id="text8"
             />
             <SprkLabel>Name</SprkLabel>
           </SprkInputContainer>
@@ -149,6 +146,7 @@ class SprkTextInputDocs extends React.Component {
               type="text"
               placeholder="Enter your first name"
               additionalClasses="sprk-b-TextInput--label-hidden"
+              id="text9"
             />
             <SprkLabel>Name</SprkLabel>
           </SprkInputContainer>
@@ -211,6 +209,7 @@ class SprkTextInputDocs extends React.Component {
                 value={monetary}
                 onChange={this.handleChange}
               // formatter={sprkFormatMonetary}
+                // formatter={this.cats}
               />
             </div>
             {!sprkIsValidMonetary(monetary) &&
@@ -261,8 +260,7 @@ class SprkTextInputDocs extends React.Component {
               isValid={sprkIsValidPhone(phone)}
               value={phone}
               onChange={this.handleChange}
-              // TODO formatter
-              // formatter={sprkFormatMonetary}
+              formatter={sprkFormatPhone}
             />
             {!sprkIsValidPhone(phone) &&
               <SprkFieldError id="invalid-phone">
@@ -278,7 +276,6 @@ class SprkTextInputDocs extends React.Component {
 
         </ExampleContainer>
         <ExampleContainer heading="Date (no picker)">
-          {/* TODO formatting */}
           <SprkInputContainer>
             <SprkLabel htmlFor="date-1">Date</SprkLabel>
             <SprkInput
@@ -288,6 +285,7 @@ class SprkTextInputDocs extends React.Component {
               value={date}
               isValid={sprkIsValidDate(date)}
               onChange={this.handleChange}
+              formatter={sprkFormatDate}
             />
             {!sprkIsValidDate(date) &&
               <SprkFieldError id="invalid-date">
@@ -304,7 +302,7 @@ class SprkTextInputDocs extends React.Component {
         <ExampleContainer heading="Multiple aria-describedbys">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
-            <SprkInput type="text" ariaDescribedBy="required_message" />
+            <SprkInput type="text" ariaDescribedBy="required_message" id="multi-aria"/>
             <SprkHelperText>The name you would like to be addressed as.</SprkHelperText>
             <SprkFieldError>
               <SprkIcon

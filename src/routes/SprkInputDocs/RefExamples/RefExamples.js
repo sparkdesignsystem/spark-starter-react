@@ -6,13 +6,10 @@ import {
   SprkIcon,
   SprkFieldError,
   SprkHelperText,
-  SprkDatePicker,
   sprkIsValidMonetary,
   sprkFormatMonetary,
   SprkTextareaContainer,
   SprkTextarea,
-  SprkSelect,
-  sprkIsValidDate,
 }
   from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
@@ -79,8 +76,8 @@ class RefExamples extends Component {
       monetaryControlled,
       monetaryUncontrolled,
       textareaUncontrolled,
-      selectUncontrolled,
-      dateUncontrolled,
+      // selectUncontrolled,
+      // dateUncontrolled,
     } = this.state;
 
     return (
@@ -93,6 +90,7 @@ class RefExamples extends Component {
               name="textControlled"
               value={textControlled}
               onChange={this.handleChange}
+              id="controlled1"
             />
             <SprkHelperText>This value is stored in state in a React component and is updated using props and callbacks on the input.</SprkHelperText>
             <SprkHelperText>The current value is: {textControlled}</SprkHelperText>
@@ -101,7 +99,7 @@ class RefExamples extends Component {
         <ExampleContainer heading="Uncontrolled">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
-            <SprkInput type="text" forwardedRef={this.uncontrolledTextRef} onKeyUp={this.uncontrolledTextChanged} />
+            <SprkInput type="text" forwardedRef={this.uncontrolledTextRef} onKeyUp={this.uncontrolledTextChanged} id="uncontrolled1"/>
             <SprkHelperText>This value is stored in state internal to the DOM input and is updated using a ref on the input.</SprkHelperText>
             <SprkHelperText>The current value is: <>{textUncontrolled}</></SprkHelperText>
           </SprkInputContainer>
@@ -124,10 +122,6 @@ class RefExamples extends Component {
                 isValid={sprkIsValidMonetary(monetaryControlled)}
                 value={monetaryControlled}
                 onChange={this.handleChange}
-                // TODO This currently does not work because the formatter updates the
-                // value internally in the component but does not trigger onChange, so that
-                // new value is never bubbled up to the parent. Can be fixed by adding a new callback
-                // prop or maybe by calling onChange directly from SprkInput.
                 formatter={sprkFormatMonetary}
               />
             </div>
@@ -161,12 +155,10 @@ class RefExamples extends Component {
                 isValid={sprkIsValidMonetary(monetaryUncontrolled)}
                 onKeyUp={this.uncontrolledMonetaryChanged}
                 forwardedRef={this.uncontrolledMonetaryRef}
-                // TODO This is currently not working. Formatters are set up to look at
-                // props.value, which is undefined in an uncontrolled component.
-                // A workaround for both is to not use the `formatter` prop and instead
-                // use the util function in your own onBlur. This is how this file was set up
-                // previously, but it's not "the spark way".
-                formatter={sprkFormatMonetary}
+                id="monetaryUncontrolled"
+
+                // formatters only work for Controlled components where the value is specified.
+                // formatter={sprkFormatMonetary}
               />
             </div>
             {!sprkIsValidMonetary(monetaryUncontrolled) &&
@@ -188,16 +180,18 @@ class RefExamples extends Component {
             <SprkTextarea
               onKeyUp={this.uncontrolledTextareaChanged}
               forwardedRef={this.uncontrolledTextareaRef}
+              id="textarea"
             />
             <SprkHelperText>The current value is: <>{textareaUncontrolled}</></SprkHelperText>
           </SprkTextareaContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Select">
+        {/* <ExampleContainer heading="Select">
           <SprkInputContainer>
             <SprkLabel>Select Label</SprkLabel>
             <SprkSelect
               choices={selectChoices}
               onChange={this.uncontrolledSelectChanged}
+              id="select"
               // This is not currently working because SprkSelect does not have a forwardedRef
               // prop. Internally it uses its own ref in that spot to do Huge logic.
               // forwardedRef={this.uncontrolledSelectRef}
@@ -213,8 +207,8 @@ class RefExamples extends Component {
             />
             <SprkHelperText>The current value is: <>{selectUncontrolled}</></SprkHelperText>
           </SprkInputContainer>
-        </ExampleContainer>
-        <ExampleContainer heading="Date Picker">
+        </ExampleContainer> */}
+        {/* <ExampleContainer heading="Date Picker">
         <SprkInputContainer>
             <div className="sprk-b-InputContainer__icon-container">
               <SprkLabel>Date</SprkLabel>
@@ -228,6 +222,8 @@ class RefExamples extends Component {
               <SprkDatePicker
                 isValid={sprkIsValidDate(dateUncontrolled)}
                 onChange={this.handleChange}
+                id="datepicker"
+
                 // This is not currently working because SprkSelect does not have a forwardedRef
                 // prop. Internally it uses its own ref in that spot for tiny datepicker config.
                 // forwardedRef={this.uncontrolledDatepickerRef}
@@ -245,7 +241,7 @@ class RefExamples extends Component {
             }
             <SprkHelperText>The current value is: <>{dateUncontrolled}</></SprkHelperText>
           </SprkInputContainer>
-        </ExampleContainer>
+        </ExampleContainer> */}
       </React.Fragment>
     );
   }
@@ -253,34 +249,34 @@ class RefExamples extends Component {
 
 export default RefExamples;
 
-const selectChoices = [
-  {
-    label: 'Item 1',
-    value: 'item-1',
-  },
-  {
-    label: 'Item 2',
-    value: 'item-2',
-  },
-  {
-    label: 'Grouped Options',
-    options: [
-      {
-        label: 'Option 1',
-        value: 'option-1',
-      },
-      {
-        label: 'Option 2 With A Longer Label',
-        value: 'option-2',
-      },
-      {
-        label: 'Option 3',
-        value: 'option-3',
-      },
-    ],
-  },
-  {
-    label: 'Item 3',
-    value: 'item-3',
-  },
-];
+// const selectChoices = [
+//   {
+//     label: 'Item 1',
+//     value: 'item-1',
+//   },
+//   {
+//     label: 'Item 2',
+//     value: 'item-2',
+//   },
+//   {
+//     label: 'Grouped Options',
+//     options: [
+//       {
+//         label: 'Option 1',
+//         value: 'option-1',
+//       },
+//       {
+//         label: 'Option 2 With A Longer Label',
+//         value: 'option-2',
+//       },
+//       {
+//         label: 'Option 3',
+//         value: 'option-3',
+//       },
+//     ],
+//   },
+//   {
+//     label: 'Item 3',
+//     value: 'item-3',
+//   },
+// ];

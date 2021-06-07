@@ -62,6 +62,7 @@ class FormExample extends Component {
             name="Name"
             onChange={this.handleChange}
             value={Name}
+            id="text1"
           />
         </SprkInputContainer>
         <SprkInputContainer>
@@ -74,7 +75,7 @@ class FormExample extends Component {
             isValid={sprkIsValidPhone(Phone)}
             value={Phone}
             onChange={this.handleChange}
-          // TODO formatter
+            formatter={sprkFormatPhone}
           />
           { !sprkIsValidPhone(Phone) &&
             <SprkFieldError id="invalid-phone">
@@ -95,6 +96,7 @@ class FormExample extends Component {
             name="Email"
             onChange={this.handleChange}
             value={Email}
+            id="email"
           />
         </SprkInputContainer>
 

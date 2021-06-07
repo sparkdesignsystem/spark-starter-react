@@ -3,6 +3,8 @@ import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import {
   SprkButton,
+  SprkFieldError,
+  SprkIcon,
   sprkIsValidPhone,
   sprkFormatPhone,
   SprkInputContainer,
@@ -30,6 +32,7 @@ const FormikExample = () => (
             <SprkInputContainer>
               <SprkLabel>Name</SprkLabel>
               <SprkInput
+                id="text2"
                 type="text"
                 placeholder="Enter your first name"
                 name="Name"
@@ -52,12 +55,12 @@ const FormikExample = () => (
                 placeholder="(000) 000-0000"
                 type="tel"
                 isValid={sprkIsValidPhone(values.phone)}
+                id="phone"
                 value={values.phone}
+                formatter={sprkFormatPhone}
                 {...field}
-              // TODO formatter
               />
-              {/* { !sprkIsValidPhone(phone) &&
-              // TODO error state
+              { !sprkIsValidPhone(values.phone) &&
                   <SprkFieldError id="invalid-phone">
                     <SprkIcon
                       iconName="exclamation-filled"
@@ -66,7 +69,7 @@ const FormikExample = () => (
                     />
                     <div className="sprk-b-ErrorText">There is an error on this field.</div>
                   </SprkFieldError>
-                } */}
+                }
             </SprkInputContainer>
           )}
         </Field>
@@ -80,6 +83,7 @@ const FormikExample = () => (
               type="email"
               placeholder="email@example.com"
               value={values.email}
+              id="email2"
               {...field}
             />
           </SprkInputContainer>

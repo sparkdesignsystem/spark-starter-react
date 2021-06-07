@@ -53,6 +53,7 @@ class SprkRevealInputDocs extends Component {
             <SprkLabel>Password</SprkLabel>
             <SprkInput
               type={showPassword ? 'text' : 'password'}
+              id="password"
             />
             <SprkCheckboxItem
               checked={showPassword}
@@ -66,38 +67,26 @@ class SprkRevealInputDocs extends Component {
 
         </ExampleContainer>
         <ExampleContainer heading="SSN">
-          {/* <SprkRevealInput
-            errorMessage="There is an error in this field."
-            formatter={sprkFormatSSN}
-            valid={sprkIsValidSSN(ssn)}
-            value={ssn}
-            onChange={this.handleChange}
-            label="Social Security Number"
-            toggleLabel="Show SSN"
-            name="ssn"
-          /> */}
-        </ExampleContainer>
-
-
-        <SprkInputContainer>
-          <SprkLabel>Social Security Number</SprkLabel>
-          <SprkInput
-            type={showSSN ? 'text' : 'password'}
-            value={ssn}
-            isValid={sprkIsValidSSN(ssn)}
-            onChange={this.handleChange}
-            name="ssn"
-          />
-          <SprkCheckboxItem
-            checked={showSSN}
-            isVisibilityToggle
-            onChange={this.toggleSSN}
-            name="showSSN"
-          >
-            Show SSN
+          <SprkInputContainer>
+            <SprkLabel>Social Security Number</SprkLabel>
+            <SprkInput
+              type={showSSN ? 'text' : 'password'}
+              value={ssn}
+              isValid={sprkIsValidSSN(ssn)}
+              onChange={this.handleChange}
+              formatter={sprkFormatSSN}
+              name="ssn"
+              id="ssn"
+            />
+            <SprkCheckboxItem
+              checked={showSSN}
+              isVisibilityToggle
+              onChange={this.toggleSSN}
+              name="showSSN"
+            >
+              Show SSN
             </SprkCheckboxItem>
-            {/* formatting */}
-            { !sprkIsValidSSN(ssn) &&
+            {!sprkIsValidSSN(ssn) &&
               <SprkFieldError id="invalid-date">
                 <SprkIcon
                   iconName="exclamation-filled"
@@ -107,7 +96,8 @@ class SprkRevealInputDocs extends Component {
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
             }
-        </SprkInputContainer>
+          </SprkInputContainer>
+        </ExampleContainer>
 
       </React.Fragment>
     );

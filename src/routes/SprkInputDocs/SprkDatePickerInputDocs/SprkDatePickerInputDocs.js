@@ -32,19 +32,6 @@ class SprkDatePickerInputDocs extends Component {
     return (
       <React.Fragment>
         <ExampleContainer heading="Text">
-          {/* <SprkDatePickerInput
-            formatter={sprkFormatDate}
-            label="Date"
-            name="date"
-            placeholder="01/01/2019"
-            valid={sprkIsValidDate(date)}
-            value={date}
-            onChange={this.handleChange}
-            errorMessage="Incorrect date."
-          /> */}
-
-
-
           <SprkInputContainer>
             <div className="sprk-b-InputContainer__icon-container">
               <SprkLabel htmlFor="datepicker-1">Date</SprkLabel>
@@ -62,6 +49,7 @@ class SprkDatePickerInputDocs extends Component {
                 value={date}
                 onChange={this.handleChange}
                 name="date"
+                formatter={sprkFormatDate}
               />
             </div>
             { !sprkIsValidDate(date) &&
