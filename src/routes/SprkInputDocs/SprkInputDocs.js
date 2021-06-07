@@ -6,6 +6,7 @@ import SprkTextInputDocs from './SprkTextInputDocs/SprkTextInputDocs';
 import SprkSelectionInputDocs from './SprkSelectionInputDocs/SprkSelectionInputDocs';
 import SprkRevealInputDocs from './SprkRevealInputDocs/SprkRevealInputDocs';
 import SprkDatePickerInputDocs from './SprkDatePickerInputDocs/SprkDatePickerInputDocs';
+import RefExamples from './RefExamples/RefExamples';
 
 const SprkInputDocs = () => (
   <CentralColumnLayout>
@@ -35,12 +36,18 @@ const SprkInputDocs = () => (
           Form Examples
         </Link>
       </li>
+      <li>
+        <Link to="/input/refs">
+          Ref Examples
+        </Link>
+      </li>
     </ul>
     <Route path="/input/forms" component={FormExamples} />
     <Route path="/input/text-input" component={SprkTextInputDocs} />
     <Route path="/input/selection-input" component={SprkSelectionInputDocs} />
     <Route path="/input/reveal-input" component={SprkRevealInputDocs} />
     <Route path="/input/datepicker" component={SprkDatePickerInputDocs} />
+    <Route path="/input/refs" component={RefExamples} />
   </CentralColumnLayout>
 );
 

@@ -1,12 +1,20 @@
 import React from 'react';
 import {
-  SprkTextInput,
   sprkIsValidPhone,
   sprkIsValidDate,
   sprkFormatDate,
   sprkFormatPhone,
   sprkIsValidMonetary,
-  sprkFormatMonetary,
+  // sprkFormatMonetary,
+  SprkInputContainer,
+  SprkLabel,
+  SprkInput,
+  SprkIcon,
+  SprkFieldError,
+  SprkHelperText,
+  SprkTextareaContainer,
+  SprkTextarea,
+
 } from '@sparkdesignsystem/spark-react/';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
@@ -19,7 +27,7 @@ class SprkTextInputDocs extends React.Component {
       monetary: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handleMonetaryBlur = this.handleMonetaryBlur.bind(this);
+    this.cats = this.cats.bind(this);
   }
 
   handleChange({ target }) {
@@ -29,11 +37,10 @@ class SprkTextInputDocs extends React.Component {
     });
   }
 
-  handleMonetaryBlur({ target }) {
-    const { value } = target;
-    this.setState({
-      monetary: sprkIsValidMonetary(value) ? sprkFormatMonetary(value) : value,
-    });
+  cats = (value) => {
+    return Number(value.replace(/,/g, ''))
+    .toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    .replace(/\$/g, '');
   }
 
   render() {
@@ -41,159 +48,272 @@ class SprkTextInputDocs extends React.Component {
     return (
       <>
         <ExampleContainer heading="Text">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            placeholder="Enter your first name"
-          />
+          <SprkInputContainer>
+            <SprkLabel>Name</SprkLabel>
+            <SprkInput type="text" placeholder="Enter your first name" id="text1"/>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text With Default Value">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            defaultValue="default value"
-            placeholder="Enter your first name"
-          />
+        <ExampleContainer heading="Text with default value">
+          <SprkInputContainer>
+            <SprkLabel>Name</SprkLabel>
+            <SprkInput type="text" defaultValue="default value"  id="text2"/>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Input Disabled">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            disabled
-            placeholder="Enter your first name"
-          />
+        <ExampleContainer heading="Text input disabled">
+          <SprkInputContainer>
+            <SprkLabel isDisabled>Name</SprkLabel>
+            <SprkInput type="text" placeholder="Enter your first name" isDisabled  id="text3"/>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Input - Error">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            valid={false}
-            placeholder="Enter your first name"
-            errorMessage="There is an error on this field."
-          />
+        <ExampleContainer heading="Text input error">
+          <SprkInputContainer>
+            <SprkLabel>Name</SprkLabel>
+            <SprkInput
+              type="text"
+              isValid={false}
+              placeholder="Enter your first name"
+              id="text4"
+            />
+            <SprkFieldError>
+              <SprkIcon
+                iconName="exclamation-filled"
+                additionalClasses="sprk-b-ErrorIcon"
+                aria-hidden="true"
+              />
+              <div className="sprk-b-ErrorText">There is an error on this field.</div>
+            </SprkFieldError>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Huge">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            placeholder="Enter your first name"
-            type="hugeTextInput"
-          />
+        <ExampleContainer heading="Huge">
+          <SprkInputContainer variant="huge">
+            <SprkInput
+              variant="huge"
+              type="text"
+              placeholder="Enter your first name"
+              id="text5"
+            />
+            <SprkLabel>Name</SprkLabel>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Huge - Error">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            type="hugeTextInput"
-            valid={false}
-            placeholder="Enter your first name"
-            errorMessage="There is an error on this field."
-          />
+        <ExampleContainer heading="Huge Error">
+          <SprkInputContainer variant="huge">
+            <SprkInput
+              variant="huge"
+              placeholder="Enter your first name"
+              isValid={false}
+              type="text"
+              id="text6"
+            />
+            <SprkLabel>Name</SprkLabel>
+            <SprkFieldError>
+              <SprkIcon
+                iconName="exclamation-filled"
+                additionalClasses="sprk-b-ErrorIcon"
+                aria-hidden="true"
+              />
+              <div className="sprk-b-ErrorText">There is an error on this field.</div>
+            </SprkFieldError>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Huge - Disabled">
-          <SprkTextInput
-            type="hugeTextInput"
-            label="Text Input Label"
-            name="text-input-label"
-            valid={true}
-            disabled
-            errorMessage="There is an error on this field."
-          />
+        <ExampleContainer heading="Huge Disabled">
+          <SprkInputContainer variant="huge">
+            <SprkInput
+              variant="huge"
+              placeholder="Enter your first name"
+              isDisabled
+              type="text"
+              id="text7"
+            />
+            <SprkLabel>Text Input Label</SprkLabel>
+          </SprkInputContainer>
         </ExampleContainer>
-        <ExampleContainer heading="Text Huge With Default Value">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            placeholder="Enter your first name"
-            type="hugeTextInput"
-            defaultValue="Default Value"
-          />
+        <ExampleContainer heading="Huge with default value">
+          <SprkInputContainer variant="huge">
+            <SprkInput
+              variant="huge"
+              type="text"
+              placeholder="Enter your first name"
+              defaultValue="Default Value"
+              id="text8"
+            />
+            <SprkLabel>Name</SprkLabel>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Text Huge Hidden Label">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            placeholder="Enter your first name"
-            type="hugeTextInput"
-            hiddenLabel
-          />
+          <SprkInputContainer variant="huge">
+            <SprkInput
+              variant="huge"
+              type="text"
+              placeholder="Enter your first name"
+              additionalClasses="sprk-b-TextInput--label-hidden"
+              id="text9"
+            />
+            <SprkLabel>Name</SprkLabel>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Text with Helper">
-          <SprkTextInput
-            label="Name"
-            name="Name"
-            helperText="Optional helper text."
-            placeholder="Enter your first name"
-          />
+          <SprkInputContainer>
+            <SprkLabel htmlFor="text-1">Text Input</SprkLabel>
+            <SprkInput id="text-1" placeholder="Enter your first name" />
+            <SprkHelperText id="helper-text-1">
+              Optional helper text.
+            </SprkHelperText>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Textarea">
-          <SprkTextInput
-            label="Message"
-            name="Message"
-            type="textarea"
-            placeholder="Enter your message..."
-          />
+          <SprkTextareaContainer>
+            <SprkLabel htmlFor="sprk-textarea">Message</SprkLabel>
+            <SprkTextarea id="sprk-textarea" placeholder="Enter your message..." />
+          </SprkTextareaContainer>
         </ExampleContainer>
         <ExampleContainer heading="Search">
-          <SprkTextInput label="Search" name="Search" placeholder="Search" />
+          <SprkLabel htmlFor="search-1">Search</SprkLabel>
+          <SprkInput id="search-1" placeholder="Search" />
         </ExampleContainer>
         <ExampleContainer heading="Inline Search">
-          <SprkTextInput
-            leadingIcon="search"
-            hiddenLabel
-            name="InlineSearch"
-            placeholder="Search"
-          />
+          <SprkInputContainer>
+            <div className="sprk-b-InputContainer__icon-container">
+              <SprkLabel htmlFor="search-2" isHidden>
+                Text Input Label
+              </SprkLabel>
+              <SprkIcon
+                iconName="search"
+                additionalClasses="sprk-b-InputContainer__icon"
+                aria-hidden="true"
+              />
+              <SprkInput
+                id="search-2"
+                additionalClasses="sprk-b-TextInput--has-svg-icon"
+                type="search"
+                placeholder="Search"
+              />
+            </div>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Monetary">
-          <SprkTextInput
-            label="Money Amount"
-            textIcon
-            name="monetary"
-            valid={sprkIsValidMonetary(monetary)}
-            value={monetary}
-            onChange={this.handleChange}
-            onBlur={this.handleMonetaryBlur}
-            placeholder="0.00"
-            errorMessage="Enter valid monetary amount."
-          />
+          <SprkInputContainer>
+            <div
+              className="
+                sprk-b-InputContainer__icon-container
+                sprk-b-TextInputIconContainer--has-text-icon"
+            >
+              <SprkLabel isMonetary htmlFor="monetary-1">
+                Payment
+              </SprkLabel>
+              <SprkInput
+                additionalClasses="sprk-b-TextInput--has-text-icon"
+                id="monetary-1"
+                name="monetary"
+                placeholder="0.00"
+                isValid={sprkIsValidMonetary(monetary)}
+                value={monetary}
+                onChange={this.handleChange}
+              // formatter={sprkFormatMonetary}
+                // formatter={this.cats}
+              />
+            </div>
+            {!sprkIsValidMonetary(monetary) &&
+              <SprkFieldError id="invalid-monetary">
+                <SprkIcon
+                  iconName="exclamation-filled"
+                  additionalClasses="sprk-b-ErrorIcon"
+                  aria-hidden="true"
+                />
+                <div className="sprk-b-ErrorText">There is an error on this field.</div>
+              </SprkFieldError>
+            }
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Percentage">
-          <SprkTextInput
-            label="Percentage"
-            iconRight
-            leadingIcon="percent"
-            narrowWidth
-            name="percentage"
-            type="tel"
-          />
+          <SprkInputContainer>
+            <div
+              className="
+                sprk-b-InputContainer__icon-container
+                sprk-b-InputContainer__icon-container--narrow"
+            >
+              <SprkLabel htmlFor="percentage-1">Percentage</SprkLabel>
+              <SprkIcon
+                iconName="percent"
+                additionalClasses="
+                  sprk-b-InputContainer__icon
+                  sprk-b-InputContainer__icon--right"
+                aria-hidden="true"
+              />
+              <SprkInput
+                id="percentage-1"
+                additionalClasses="
+                  sprk-b-TextInput--has-svg-icon
+                  sprk-b-InputContainer__input--has-icon-right"
+                type="tel"
+              />
+            </div>
+          </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Phone Number">
-          <SprkTextInput
-            label="Phone Number"
-            name="phone"
-            placeholder="(000) 000-0000"
-            valid={sprkIsValidPhone(phone)}
-            value={
-              sprkIsValidPhone(phone) && sprkFormatPhone(phone)
-                ? sprkFormatPhone(phone)
-                : phone
+          <SprkInputContainer>
+            <SprkLabel htmlFor="phone-1">Phone Number</SprkLabel>
+            <SprkInput
+              id="phone-1"
+              placeholder="(000) 000-0000"
+              type="tel"
+              name="phone"
+              isValid={sprkIsValidPhone(phone)}
+              value={phone}
+              onChange={this.handleChange}
+              formatter={sprkFormatPhone}
+            />
+            {!sprkIsValidPhone(phone) &&
+              <SprkFieldError id="invalid-phone">
+                <SprkIcon
+                  iconName="exclamation-filled"
+                  additionalClasses="sprk-b-ErrorIcon"
+                  aria-hidden="true"
+                />
+                <div className="sprk-b-ErrorText">There is an error on this field.</div>
+              </SprkFieldError>
             }
-            onChange={this.handleChange}
-            errorMessage="Incorrect phone number."
-          />
+          </SprkInputContainer>
+
         </ExampleContainer>
         <ExampleContainer heading="Date (no picker)">
-          <SprkTextInput
-            formatter={sprkFormatDate}
-            label="Date"
-            name="date"
-            placeholder="01/01/2019"
-            valid={sprkIsValidDate(date)}
-            value={date}
-            onChange={this.handleChange}
-            errorMessage="Incorrect date."
-          />
+          <SprkInputContainer>
+            <SprkLabel htmlFor="date-1">Date</SprkLabel>
+            <SprkInput
+              id="date-1"
+              placeholder="01/01/2019"
+              name="date"
+              value={date}
+              isValid={sprkIsValidDate(date)}
+              onChange={this.handleChange}
+              formatter={sprkFormatDate}
+            />
+            {!sprkIsValidDate(date) &&
+              <SprkFieldError id="invalid-date">
+                <SprkIcon
+                  iconName="exclamation-filled"
+                  additionalClasses="sprk-b-ErrorIcon"
+                  aria-hidden="true"
+                />
+                <div className="sprk-b-ErrorText">There is an error on this field.</div>
+              </SprkFieldError>
+            }
+          </SprkInputContainer>
+        </ExampleContainer>
+        <ExampleContainer heading="Multiple aria-describedbys">
+          <SprkInputContainer>
+            <SprkLabel>Name</SprkLabel>
+            <SprkInput type="text" ariaDescribedBy="required_message" id="multi-aria"/>
+            <SprkHelperText>The name you would like to be addressed as.</SprkHelperText>
+            <SprkFieldError>
+              <SprkIcon
+                iconName="exclamation-filled"
+                additionalClasses="sprk-b-ErrorIcon"
+                aria-hidden="true"
+              />
+              <div className="sprk-b-ErrorText">There is an error on this field.</div>
+            </SprkFieldError>
+            <div id="required_message">* This input is required.</div>
+          </SprkInputContainer>
         </ExampleContainer>
       </>
     );

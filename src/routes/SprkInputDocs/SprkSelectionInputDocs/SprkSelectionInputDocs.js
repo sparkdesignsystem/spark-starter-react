@@ -6,7 +6,13 @@ import {
   SprkCheckboxItem,
   SprkCheckboxGroup,
   SprkRadioGroup,
-  SprkRadioItem
+  SprkRadioItem,
+  SprkInputContainer,
+  SprkLabel,
+  SprkSelect,
+  SprkIcon,
+  SprkFieldError,
+  SprkHelperText,
 } from '@sparkdesignsystem/spark-react';
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
@@ -243,128 +249,200 @@ function SprkSelectionInputDocs() {
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Select Box</h1>
 
       <ExampleContainer>
-        <SprkSelectionInput
-          label="Select Box Label"
-          choices={selectChoices}
-          variant="select"
-        />
+        <SprkInputContainer>
+          <SprkLabel htmlFor="default-select">Select Box Label</SprkLabel>
+          <SprkSelect
+            id="default-select"
+            choices={selectChoices}
+            name="select"
+          />
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+        </SprkInputContainer>
       </ExampleContainer>
 
       <ExampleContainer heading="Select - Error ">
-        <SprkSelectionInput
-          choices={selectChoices}
-          variant="select"
-          label="Select Box Label"
-          name="select-error"
-          valid={false}
-          errorMessage="There is an error in the field."
-        />
+        <SprkInputContainer>
+          <SprkLabel htmlFor="invalid-select">Select Box Label</SprkLabel>
+          <SprkSelect
+            id="invalid-select"
+            choices={selectChoices}
+            name="select"
+            isValid={false}
+          />
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+          <SprkFieldError>
+            <SprkIcon
+              iconName="exclamation-filled"
+              additionalClasses="sprk-b-ErrorIcon"
+              aria-hidden="true"
+            />
+            <div className="sprk-b-ErrorText">There is an error on this field.</div>
+          </SprkFieldError>
+        </SprkInputContainer>
       </ExampleContainer>
 
       <ExampleContainer heading="Select - Disabled ">
-        <SprkSelectionInput
-          choices={selectNotRequired}
-          label="Select Box Label"
-          variant="select"
-          name="select-disabled"
-          disabled
-          errorMessage="There is an error in the field."
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Select (not required)">
-        <SprkSelectionInput
-          choices={selectNotRequired}
-          variant="select"
-          label="Select Box Label"
-        />
+        <SprkInputContainer>
+          <SprkLabel isDisabled htmlFor="disabled-select">Select Box Label</SprkLabel>
+          <SprkSelect
+            id="disabled-select"
+            choices={selectNotRequired}
+            name="disabled-select"
+            isDisabled
+          />
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+        </SprkInputContainer>
       </ExampleContainer>
 
       <ExampleContainer heading="Select With Helper And Default Option Of Item 2">
-        <SprkSelectionInput
-          choices={selectChoices}
-          label="Select Box Label"
-          helperText="Optional helper text."
-          variant="select"
-          name="select-with-helper"
-          defaultValue="item-2"
-        />
+        <SprkInputContainer>
+          <SprkLabel htmlFor="select-with-helper">Select Box Label</SprkLabel>
+          <SprkSelect
+            id="select-with-helper"
+            choices={selectChoices}
+            name="select-with-helper"
+            defaultValue="item-2"
+          />
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+          <SprkHelperText>
+            Optional helper text.
+          </SprkHelperText>
+        </SprkInputContainer>
       </ExampleContainer>
 
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Select Huge</h1>
 
       <ExampleContainer>
-        <SprkSelectionInput
-          choices={selectChoices}
-          name="select-huge"
-          helperText="Optional helper text."
-          variant="hugeSelect"
-          label="Huge Select Box Label"
-          defaultValue=""
-        />
+        <SprkInputContainer variant="huge">
+          <SprkSelect
+            id="huge-select"
+            choices={selectChoices}
+            variant="huge"
+            name="select-huge"
+          />
+          <SprkLabel htmlFor="huge-select">Huge Select Box Label</SprkLabel>
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+          <SprkHelperText>Optional helper text.</SprkHelperText>
+        </SprkInputContainer>
       </ExampleContainer>
 
       <ExampleContainer heading="Select Huge Error">
-        <SprkSelectionInput
-          choices={selectChoices}
-          name="select-huge-error"
-          variant="hugeSelect"
-          label="Huge Select Box Label"
-          valid={false}
-          errorMessage="There is an error in the field."
-          defaultValue=""
-        />
+        <SprkInputContainer variant="huge">
+          <SprkSelect
+            id="select-huge-invalid"
+            choices={selectChoices}
+            variant="huge"
+            name="select-huge-invalid"
+            isValid={false}
+          />
+          <SprkLabel htmlFor="select-huge-invalid">Huge Select Box Label</SprkLabel>
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+          <SprkFieldError id="select-huge-invalid">
+            <SprkIcon
+              aria-hidden="true"
+              iconName="exclamation-filled"
+              additionalClasses="sprk-b-ErrorIcon"
+            />
+            <div className="sprk-b-ErrorText">There is an error on this field.</div>
+          </SprkFieldError>
+        </SprkInputContainer>
       </ExampleContainer>
 
       <ExampleContainer heading="Select Huge With Default Value Of Item 3">
-        <SprkSelectionInput
-          choices={selectChoices}
-          helperText="Optional helper text."
-          name="select-huge-default-value"
-          variant="hugeSelect"
-          label="Huge Select Box Label"
-          defaultValue="item-3"
-        />
-      </ExampleContainer>
+        <SprkInputContainer variant="huge">
+          <SprkSelect
+            id="select-huge-default-value"
+            choices={selectChoices}
+            variant="huge"
+            name="select-huge"
+            defaultValue="item-3"
+          />
+          <SprkLabel htmlFor="select-huge-default-value">Huge Select Box Label</SprkLabel>
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+          <SprkHelperText>Optional helper text.</SprkHelperText>
+        </SprkInputContainer>
 
-      <ExampleContainer heading="Select Huge With Value Of Item 2">
-        <SprkSelectionInput
-          choices={selectChoices}
-          helperText="Optional helper text."
-          variant="hugeSelect"
-          label="Huge Select Box Label"
-          name="select-huge-value"
-          value="item-2"
-          onChange={() => {
-            console.log('test function');
-          }}
-        />
       </ExampleContainer>
 
       <ExampleContainer heading="Select Huge Disabled">
-        <SprkSelectionInput
-          choices={selectChoices}
-          helperText="Optional helper text."
-          name="select-huge-disabled"
-          variant="hugeSelect"
-          label="Disabled Label"
-          data-my-attr="my-test-attr"
-          disabled
-          defaultValue=""
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Select Huge With Blank First Option">
-        <SprkSelectionInput
-          choices={selectChoices}
-          helperText="Optional helper text."
-          variant="hugeSelect"
-          name="select-huge-blank-first-option"
-          label="Huge Select Box"
-          data-my-attr="my-test-attr"
-          defaultValue=""
-          hasBlankFirstOption
-        />
+        <SprkInputContainer variant="huge">
+          <SprkSelect
+            id="huge-disabled-select"
+            choices={[]}
+            variant="huge"
+            name="huge-disabled-select"
+            isDisabled
+            defaultValue=""
+          />
+          <SprkLabel htmlFor="huge-disabled-select" isDisabled>
+            Select Box Label
+          </SprkLabel>
+          <SprkIcon
+            iconName="chevron-down"
+            aria-hidden="true"
+            additionalClasses="
+              sprk-c-Icon--filled-current-color
+              sprk-c-Icon--stroke-current-color
+              sprk-b-SelectContainer__icon
+            "
+          />
+        </SprkInputContainer>
       </ExampleContainer>
     </>
   );
