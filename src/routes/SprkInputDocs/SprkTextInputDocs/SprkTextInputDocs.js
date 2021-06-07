@@ -5,7 +5,7 @@ import {
   sprkFormatDate,
   sprkFormatPhone,
   sprkIsValidMonetary,
-  sprkFormatMonetary,
+  // sprkFormatMonetary,
   SprkInputContainer,
   SprkLabel,
   SprkInput,
