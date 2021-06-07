@@ -92,16 +92,16 @@ class RefExamples extends Component {
               onChange={this.handleChange}
               id="controlled1"
             />
-            <SprkHelperText>This value is stored in state in a React component and is updated using props and callbacks on the input.</SprkHelperText>
-            <SprkHelperText>The current value is: {textControlled}</SprkHelperText>
+            <SprkHelperText id="helper1">This value is stored in state in a React component and is updated using props and callbacks on the input.</SprkHelperText>
+            <SprkHelperText id="helper2">The current value is: {textControlled}</SprkHelperText>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Uncontrolled">
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
             <SprkInput type="text" forwardedRef={this.uncontrolledTextRef} onKeyUp={this.uncontrolledTextChanged} id="uncontrolled1"/>
-            <SprkHelperText>This value is stored in state internal to the DOM input and is updated using a ref on the input.</SprkHelperText>
-            <SprkHelperText>The current value is: <>{textUncontrolled}</></SprkHelperText>
+            <SprkHelperText id="helper3">This value is stored in state internal to the DOM input and is updated using a ref on the input.</SprkHelperText>
+            <SprkHelperText id="helper4">The current value is: <>{textUncontrolled}</></SprkHelperText>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Monetary Controlled">
@@ -125,7 +125,7 @@ class RefExamples extends Component {
                 formatter={sprkFormatMonetary}
               />
             </div>
-            <SprkHelperText>The current value is: <>{monetaryControlled}</></SprkHelperText>
+            <SprkHelperText id="helper5">The current value is: <>{monetaryControlled}</></SprkHelperText>
             {!sprkIsValidMonetary(monetaryControlled) &&
               <SprkFieldError id="invalid-monetary">
                 <SprkIcon
@@ -171,7 +171,7 @@ class RefExamples extends Component {
                 <div className="sprk-b-ErrorText">There is an error on this field.</div>
               </SprkFieldError>
             }
-            <SprkHelperText>The current value is: <>{monetaryUncontrolled}</></SprkHelperText>
+            <SprkHelperText id="helper6">The current value is: <>{monetaryUncontrolled}</></SprkHelperText>
           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Textarea">
@@ -182,7 +182,7 @@ class RefExamples extends Component {
               forwardedRef={this.uncontrolledTextareaRef}
               id="textarea"
             />
-            <SprkHelperText>The current value is: <>{textareaUncontrolled}</></SprkHelperText>
+            <SprkHelperText id="helper7">The current value is: <>{textareaUncontrolled}</></SprkHelperText>
           </SprkTextareaContainer>
         </ExampleContainer>
         {/* <ExampleContainer heading="Select">

@@ -286,7 +286,7 @@ function SprkSelectionInputDocs() {
               sprk-b-SelectContainer__icon
             "
           />
-          <SprkFieldError>
+          <SprkFieldError id="error1">
             <SprkIcon
               iconName="exclamation-filled"
               additionalClasses="sprk-b-ErrorIcon"
@@ -336,7 +336,7 @@ function SprkSelectionInputDocs() {
               sprk-b-SelectContainer__icon
             "
           />
-          <SprkHelperText>
+          <SprkHelperText id="helper1">
             Optional helper text.
           </SprkHelperText>
         </SprkInputContainer>
@@ -362,7 +362,7 @@ function SprkSelectionInputDocs() {
               sprk-b-SelectContainer__icon
             "
           />
-          <SprkHelperText>Optional helper text.</SprkHelperText>
+          <SprkHelperText id="helper2">Optional helper text.</SprkHelperText>
         </SprkInputContainer>
       </ExampleContainer>
 
@@ -415,7 +415,7 @@ function SprkSelectionInputDocs() {
               sprk-b-SelectContainer__icon
             "
           />
-          <SprkHelperText>Optional helper text.</SprkHelperText>
+          <SprkHelperText id="helper3">Optional helper text.</SprkHelperText>
         </SprkInputContainer>
 
       </ExampleContainer>

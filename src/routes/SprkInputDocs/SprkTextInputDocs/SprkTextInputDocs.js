@@ -5,7 +5,6 @@ import {
   sprkFormatDate,
   sprkFormatPhone,
   sprkIsValidMonetary,
-  // sprkFormatMonetary,
   SprkInputContainer,
   SprkLabel,
   SprkInput,
@@ -74,7 +73,7 @@ class SprkTextInputDocs extends React.Component {
               placeholder="Enter your first name"
               id="text4"
             />
-            <SprkFieldError>
+            <SprkFieldError id="error1">
               <SprkIcon
                 iconName="exclamation-filled"
                 additionalClasses="sprk-b-ErrorIcon"
@@ -105,7 +104,7 @@ class SprkTextInputDocs extends React.Component {
               id="text6"
             />
             <SprkLabel>Name</SprkLabel>
-            <SprkFieldError>
+            <SprkFieldError id="error2">
               <SprkIcon
                 iconName="exclamation-filled"
                 additionalClasses="sprk-b-ErrorIcon"
@@ -303,8 +302,8 @@ class SprkTextInputDocs extends React.Component {
           <SprkInputContainer>
             <SprkLabel>Name</SprkLabel>
             <SprkInput type="text" ariaDescribedBy="required_message" id="multi-aria"/>
-            <SprkHelperText>The name you would like to be addressed as.</SprkHelperText>
-            <SprkFieldError>
+            <SprkHelperText id="helper-text-2">The name you would like to be addressed as.</SprkHelperText>
+            <SprkFieldError id="error-3">
               <SprkIcon
                 iconName="exclamation-filled"
                 additionalClasses="sprk-b-ErrorIcon"
