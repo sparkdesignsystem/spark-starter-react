@@ -147,47 +147,6 @@ function SprkSelectionInputDocs() {
         </SprkFieldset>
       </SprkCheckboxGroup>
 
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Checkbox (Deprecated)</h1>
-
-      <ExampleContainer heading="Checkbox">
-        <SprkSelectionInput
-          groupLabel="Checkbox Input"
-          choices={checkBoxChoices}
-          variant="checkbox"
-          name="checkbox-input"
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Checkbox With onChange">
-        <SprkSelectionInput
-          groupLabel="Checkbox Input"
-          choices={checkBoxChoicesOnChange}
-          variant="checkbox"
-          name="checkbox-input"
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Checkbox - Error">
-        <SprkSelectionInput
-          groupLabel="Checkbox Input"
-          choices={checkBoxChoices}
-          variant="checkbox"
-          name="checkbox-input"
-          valid={false}
-          errorMessage="There is an error on this field."
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Checkbox - Disabled">
-        <SprkSelectionInput
-          groupLabel="Checkbox Input"
-          choices={checkBoxChoices}
-          variant="checkbox"
-          name="checkbox-input"
-          disabled
-        />
-      </ExampleContainer>
-
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Radio</h1>
 
       <SprkRadioGroup>
@@ -213,38 +172,6 @@ function SprkSelectionInputDocs() {
           </SprkRadioItem>
         </SprkFieldset>
       </SprkRadioGroup>
-
-      <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Radio (Deprecated)</h1>
-
-      <ExampleContainer>
-        <SprkSelectionInput
-          groupLabel="Legend Label"
-          choices={radioChoices1}
-          variant="radio"
-          name="radio-input"
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Radio - Disabled">
-        <SprkSelectionInput
-          groupLabel="Radio Input Disabled"
-          choices={radioChoices}
-          variant="radio"
-          name="radio-input"
-          disabled
-        />
-      </ExampleContainer>
-
-      <ExampleContainer heading="Radio - Error">
-        <SprkSelectionInput
-          groupLabel="Radio Error"
-          choices={radioChoices}
-          variant="radio"
-          name="radio-input"
-          valid={false}
-          errorMessage="There is an error on this field."
-        />
-      </ExampleContainer>
 
       <h1 className="sprk-b-TypeDisplayTwo sprk-u-mbm">Select Box</h1>
 
