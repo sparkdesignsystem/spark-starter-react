@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  SprkSelectionInput,
   SprkFieldset,
   SprkLegend,
   SprkCheckboxItem,
@@ -17,65 +16,6 @@ import {
 import ExampleContainer from '../../../containers/ExampleContainer/ExampleContainer';
 
 function SprkSelectionInputDocs() {
-  const radioChoices = [
-    {
-      label: 'Radio Item 1',
-      name: 'radio-input',
-      value: 'item-1',
-      defaultChecked: true,
-    },
-    {
-      label: 'Radio Item 2',
-      name: 'radio-input',
-      value: 'item-2',
-    },
-  ];
-
-  const radioChoices1 = [
-    {
-      label: 'Radio Item 1',
-      name: 'radio-input-1',
-      value: 'item-1',
-      defaultChecked: true,
-    },
-    {
-      label: 'Radio Item 2',
-      name: 'radio-input-1',
-      value: 'item-2',
-    },
-  ];
-
-  const checkBoxChoices = [
-    {
-      label: 'Checkbox Item 1',
-      name: 'checkbox-input',
-      value: 'item-1',
-    },
-    {
-      label: 'Checkbox Item 2',
-      name: 'checkbox-input',
-      value: 'item-2',
-      defaultChecked: true,
-    },
-  ];
-
-  const checkBoxChoicesOnChange = [
-    {
-      label: 'Checkbox Item 1',
-      name: 'checkbox-input',
-      value: 'item-1',
-      onChange: () => {
-        console.log('item 1 onChange handler');
-      },
-    },
-    {
-      label: 'Checkbox Item 2',
-      name: 'checkbox-input',
-      value: 'item-2',
-      defaultChecked: true,
-    },
-  ];
-
   const selectChoices = [
     {
       label: 'Item 1',
