@@ -163,6 +163,15 @@ const SprkMastheadExtendedDocs  = () => {
   return (
     <EmptyLayout>
       <SprkMasthead
+        navLink={
+          <SprkLink
+            variant="simple"
+            href="#nogo"
+            additionalClasses="sprk-c-Masthead__link"
+          >
+            Sign In
+          </SprkLink>
+        }
         bigNavLinks={links}
         selector={selector}
         narrowSelector={selector}
