@@ -7,7 +7,9 @@ const SprkCardDocs = () => {
   return (
     <CentralColumnLayout>
       <ExampleContainer>
-        <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Base Card</h3>
+        <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
+          Base Card
+        </h3>
         <SprkCard idString="default">
           <SprkStack
             additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
@@ -21,7 +23,9 @@ const SprkCardDocs = () => {
       </ExampleContainer>
 
       <ExampleContainer>
-        <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">Standout Card</h3>
+        <h3 className="sprk-b-TypeDisplayFour sprk-u-mbm">
+          Standout Card
+        </h3>
         <SprkCard isStandout idString="standout">
           <SprkStack
             additionalClasses="sprk-o-Stack__item sprk-c-Card__content"
@@ -47,7 +51,7 @@ const SprkCardDocs = () => {
               <SprkHeading
                 element="h3"
                 variant="displaySeven"
-                additionalClasses="sprk-u-Color--white"
+                additionalClasses="sprk-c-Card__highlighted-heading"
               >
                 Description
               </SprkHeading>
@@ -57,7 +61,7 @@ const SprkCardDocs = () => {
               <SprkHeading
                 element="h4"
                 variant="displayFive"
-                additionalClasses="sprk-u-Color--white"
+                additionalClasses="sprk-c-Card__highlighted-heading"
               >
                 Card Title
               </SprkHeading>
@@ -140,7 +144,7 @@ const SprkCardDocs = () => {
             additionalClasses="
               sprk-o-Stack__item
               sprk-c-Card__content
-              sprk-u-TextAlign--center
+              sprk-b-Type--center
             "
           >
             <SprkStackItem>
