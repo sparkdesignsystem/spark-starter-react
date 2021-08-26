@@ -166,8 +166,10 @@ class SprkTextInputDocs extends React.Component {
           </SprkTextareaContainer>
         </ExampleContainer>
         <ExampleContainer heading="Search">
-          <SprkLabel htmlFor="search-1">Search</SprkLabel>
-          <SprkInput id="search-1" placeholder="Search" />
+           <SprkInputContainer>
+            <SprkLabel htmlFor="search-1">Search</SprkLabel>
+            <SprkInput id="search-1" placeholder="Search" />
+           </SprkInputContainer>
         </ExampleContainer>
         <ExampleContainer heading="Inline Search">
           <SprkInputContainer>
