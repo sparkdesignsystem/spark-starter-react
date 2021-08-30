@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@sparkdesignsystem/spark-react": "^6.0.0",
+    "@sparkdesignsystem/spark-react": "^7.0.0",
     "formik": "^2.2.6",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
